@@ -1,0 +1,99 @@
+table { border:0px; border-collapse:collapse ; width:100%} 
+td {vertical-align:top; padding:0px; }
+
+
+td, table, select, input, textarea{
+	font-family:arial;
+	font-size:12px;
+	vertical-align:top;
+	line-height:15px;
+	color:#726E64
+}
+
+form { margin:0px; padding:0px}
+body { margin:0px; padding:0px; background:#36342F}
+
+ul{margin:0px; padding:0px; list-style:none}
+ul li { background:url(images/marker.gif) no-repeat 1px 9px; color:#606363; padding-left:11px; line-height:20px}
+ul li a{text-decoration:none; color:#AFC61D}
+ul li a:hover{color:#C9C9B5}
+
+.list a{background:url(images/marker.gif) no-repeat 6px 6px #262421; padding-right:5px; padding-left:16px; width:80px; height:16px; color:#AFC61D; text-decoration:none; margin-left:1px}
+.list a:hover{color:#C9C9B5}
+
+.list1 a{background:url(images/marker.gif) no-repeat 6px 6px #262421; padding-right:42px; padding-left:16px; width:200px; height:16px; color:#AFC61D; text-decoration:none; margin-left:1px}
+.list1 a:hover{color:#C9C9B5}
+
+.list2 a{background:url(images/marker.gif) no-repeat 6px 6px #262421; padding-right:5px; padding-left:16px; width:131px; height:16px; color:#AFC61D; text-decoration:none; margin-left:1px}
+.list2 a:hover{color:#C9C9B5}
+
+.list3 span a{background:url(images/marker.gif) no-repeat 6px 6px #262421; padding-right:5px; padding-left:16px; width:101px; height:16px; color:#AFC61D; text-decoration:none; margin-left:1px}
+.list3 span a:hover{color:#C9C9B5}
+
+.list4 a{background: no-repeat 6px 6px #36342F; color:#AFC61D; text-decoration:none; margin-left:1px}
+.list4 a:hover{color:#C9C9B5}
+
+.link1 {background:url(images/marker.gif) no-repeat 6px 6px #262421; padding-right:5px; padding-left:16px; width:51px; height:16px; color:#AFC61D; text-decoration:none; margin-left:1px}
+.link1 a:hover{color:#C9C9B5}
+
+.link2 {background:url(images/marker.gif) no-repeat 6px 6px #262421; padding-right:5px; padding-left:16px; width:62px; height:16px; color:#AFC61D; text-decoration:none; margin-left:1px; font-weight:100}
+.link2 a:hover{color:#C9C9B5}
+
+
+span {color:#AFC61D}
+span a{text-decoration:none; color:#AFC61D}
+span a:hover{color:#C9C9B5}
+strong { color:#C9C9B5}
+
+.style {height:100%; width:766px}
+
+.bg1{ background:url(images/bg1_1.jpg) no-repeat top; height:330px}
+.bg2{ background:#5B594E; width:1px}
+.bg3{ background:url(images/bg1_2.gif) no-repeat bottom #5B594E; width:1px}
+.bg4 {background: url(images/bg1_3.gif) no-repeat top #5B594E; width:1px}
+
+
+.footer {background:url(images/bg_footer.gif) repeat-x; height:57px; padding-left:20px; vertical-align:middle}
+.footer a{ text-decoration:none; color:#726E64}
+.footer a:hover{text-decoration:underline}
+.footer1 {width:726px; height:100%; background:#262421}
+
+.form input {
+	width:207px;
+	height:18px;
+	padding:0 0 0 7px;
+	color:#C9C9B5;
+	line-height:13px;
+	background-color:#262421;
+	border:solid 1px #5B594E;
+}
+
+.form textarea {
+	width:207px;
+	height:114px;
+	overflow: auto;
+	color:#C9C9B5;
+	padding:0 0 0 7px;
+	background-color:#262421;
+	border:solid 1px #5B594E;
+	scrollbar-3dlight-color:#262421;
+    scrollbar-track-color:#262421;
+    scrollbar-shadow-color:#262421 ;
+    scrollbar-face-color:#5B594E; 
+	scrollbar-arrow-color:#262421;
+	scrollbar-darkShadow-color:#262421 ;
+}
+	
+.form a:hover{ color:#C9C9B5}
+
+
+ .mensajeErr{
+    color:#FE3202;
+    font-size:11px;
+    padding-top:2px;
+    padding-bottom:2px;
+}
+.mensajeSucc{
+    color:#6AA316;
+    font-size:11px;
+}
