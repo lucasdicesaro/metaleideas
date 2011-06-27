@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+	http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+	<url>
+		<loc>http://www.metaleideas.com.ar/index.php</loc>
+		<lastmod>2009-05-14</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>http://www.metaleideas.com.ar/nosotros.php</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://www.metaleideas.com.ar/servicios.php</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://www.metaleideas.com.ar/productos.php</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://www.metaleideas.com.ar/clientes.php</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://www.metaleideas.com.ar/contacto.php</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+</urlset>

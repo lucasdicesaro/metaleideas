@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /images/
+Disallow: /contacto_consulta.php
+Disallow: /contacto_save.php
+Disallow: /config.php
+Disallow: /terminos.html
