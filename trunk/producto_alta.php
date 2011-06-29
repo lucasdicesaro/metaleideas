@@ -78,8 +78,8 @@
                                                                             </tr>
                                                                             <tr>
                                                                                 <td style="height:131px">
-                                                                                    <a href="productos.php" class="link2">Volver a Productos</a>
-                                                                                    <a href="producto_consulta.php" class="link2">Consultar Productos</a>
+                                                                                    <a href="productos.php" class="link2">Volver&nbsp;a&nbsp;Productos</a>
+                                                                                    <a href="producto_consulta.php" class="link2">Consultar&nbsp;Productos</a>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>

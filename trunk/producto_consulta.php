@@ -81,8 +81,8 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
                                                 </tr>
                                                 <tr>
                                                     <td style="height:50px" >
-                                                    	<a href="productos.php" class="link2">Volver a Productos</a>
-                                                    	<a href="producto_alta.php" class="link2">Alta Productos</a>
+                                                    	<a href="productos.php" class="link2">Volver&nbsp;a&nbsp;Productos</a>
+                                                    	<a href="producto_alta.php" class="link2">Alta&nbsp;Productos</a>
                                                     </td>
                                                 </tr>																		
                                                 <tr>
