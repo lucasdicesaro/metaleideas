@@ -1,15 +1,6 @@
 
-
-
--- kinetiac_metaleideasDB
--- kinetiac_metuser
--- jotabm
---
--- kinetiac_metadm
--- Kine_09
-
-CREATE DATABASE `kinetiac_metaleideasDB` ;
-USE kinetiac_metaleideasDB;
+CREATE DATABASE `metaleideasDB` ;
+USE metaleideasDB;
 -- --------------------------------------------------------
 
 -- 
@@ -23,14 +14,3 @@ CREATE TABLE `contactos` (
   `mensaje` text NOT NULL
 ) ;
 
--- 
--- Volcar la base de datos para la tabla `contactos`
--- 
-
-INSERT INTO `contactos` VALUES ('Lucas', '1559572725', 'lucasdicesaro@gmail.com', 'sdfas  df afdg  sdfg as sd fs');
-INSERT INTO `contactos` VALUES ('Juan', '1559572722', 'juan.medina@metaleideas.com.ar', 'Este es el mensaje de JOTA');
-INSERT INTO `contactos` VALUES ('Lucas', '45454567', 'lucasdicesaro@gmail.com', 'Neceszito el producto modelo pepe-0606');
-INSERT INTO `contactos` VALUES ('Pepe', '15151515957', 'lucasdicesaro@hotmail.com', 'Este mensajito, es un mensajito');
-INSERT INTO `contactos` VALUES ('Patricia', '0237435558', 'patririchieri@yahoo.com.ar', 'Sr Gerente:\r\n                    El Jefe de planta dice que el espejo ya lo bajo y te lo cago tu mam&Atilde;&iexcl;, ya sabe donde lo va a poner.');
-INSERT INTO `contactos` VALUES ('SIMAC LUIS', '47270580', 'LSIMAC@HAWKGPS.COM', 'Necesito cotizaciones  de cuantas cables los mas economicos, son para el pa&Atilde;&plusmn;ol de nuestra empresa.Espero su respuesta y gracias.');
-INSERT INTO `contactos` VALUES ('flavia perez', '0225715545617', 'flaviaalicia@hotmail.com', 'quisiera concocer el precio de un medidor de cables para un peque&Atilde;&plusmn;o comercio de materiales electricos');
