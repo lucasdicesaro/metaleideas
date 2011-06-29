@@ -46,12 +46,12 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
 	                                                            </td>
                                                             </tr>
                                                             <tr>
-                                                                <td style="width:241px"><img src="images/title6_3.gif" alt="" style="margin:6px 0 0 16px"><br>
+                                                                <td><img src="images/title6_3.gif" alt="" style="margin:6px 0 0 16px"><br>
                                                                 <div style="overflow-y: scroll;height:350px" > 
 																	<table border="1" id="grilla">
 																		<tr align="center">
-																			<td><strong>Nombre Foto</strong></td>
-																			<td><strong>T&iacute;tulo</strong></td>
+																			<td width="50%"><strong>Nombre Foto</strong></td>
+																			<td width="50%"><strong>T&iacute;tulo</strong></td>
 																		</tr>
 																		<?php
 																		   $tablename="productos";
