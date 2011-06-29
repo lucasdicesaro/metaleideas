@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 $host="localhost";
-$dbname="kinetiac_metaleideasDB";
-$user="kinetiac_metuser";
-$password="jotabm";
+$dbname="metaleideasDB";
+$user="metaleideasuser";
+$password="metaleideasuser";
 ?>
