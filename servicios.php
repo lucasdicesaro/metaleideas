@@ -57,11 +57,11 @@
                                                                     <!-- Encabezado -->
                                                                     <br>
                                                                     <br style="line-height:16px">
-                                                                    <div style="margin-left:20px; width:192px" class="list3"><br><br>
+                                                                    <div id="dot" style="margin-left:20px; width:192px" class="list3"><br><br>
                                                                         <strong>Aplicaciones sobre maquinarias:</strong><br>
                                                                         <br style="line-height:4px">
                                                                         <ul>
-                                                                            <li><span>Diseño</span></li>
+                                                                            <li><span>Dise&ntilde;o</span></li>
                                                                             <li><span>Adaptaci&oacute;n</span></li>
                                                                             <li><span>Reformas</span></li>
                                                                             <li><span>Instalaci&oacute;n</span></li>

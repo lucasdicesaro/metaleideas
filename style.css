@@ -14,9 +14,10 @@ form { margin:0px; padding:0px}
 body { margin:0px; padding:0px; background:#36342F}
 
 ul{margin:0px; padding:0px; list-style:none}
-ul li { background:url(images/marker.gif) no-repeat 1px 9px; color:#606363; padding-left:11px; line-height:20px}
+ul li { color:#606363; padding-left:11px; line-height:20px}
 ul li a{text-decoration:none; color:#AFC61D}
 ul li a:hover{color:#C9C9B5}
+#dot ul li { background:url(images/marker.gif) no-repeat 1px 9px; color:#606363; padding-left:11px; line-height:20px}
 
 .list a{background:url(images/marker.gif) no-repeat 6px 6px #262421; padding-right:5px; padding-left:16px; width:80px; height:16px; color:#AFC61D; text-decoration:none; margin-left:1px}
 .list a:hover{color:#C9C9B5}

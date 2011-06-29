@@ -49,14 +49,14 @@
                                                                 <td style="width:242px">
                                                                     <img src="images/title1_2.gif" alt="" style="margin:7px 0 0 17px"><br>
                                                                     <br style="line-height:17px">
-                                                                    <div style="margin-left:20px; width:207px"><strong>Aumente su productividad, disminuya sus costos</strong><br>
+                                                                    <div id="dot" style="margin-left:20px; width:207px"><strong>Aumente su productividad, disminuya sus costos</strong><br>
                                                                         <br style="line-height:5px">
                                                                         Hacemos que cada producto tenga un uso &oacute;ptimo de los recursos, dismunuyendo sus costos y priorizando sus necesidades.<br>
                                                                         <br style="line-height:15px">
                                                                         <strong>Aplicaciones sobre maquinarias:</strong><br>
                                                                         <br style="line-height:4px">
                                                                         <ul>
-                                                                            <li><span>Diseño</span></li>
+                                                                            <li><span>Dise&ntilde;o</span></li>
                                                                             <li><span>Adaptaci&oacute;n</span></li>
                                                                             <li><span>Reformas</span></li>
                                                                             <li><span>Instalaci&oacute;n</span></li>

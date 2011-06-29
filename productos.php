@@ -5,11 +5,42 @@
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link href="style.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../style-projects-jquery.css" />    
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.lightbox-0.5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
 
-
-
+    <script type="text/javascript">
+    // http://leandrovieira.com/projects/jquery/lightbox/
+	    $(function() {
+	        $('#gallery a').lightBox({
+	        	txtImage: 'Imagen',
+	        	txtOf: 'de'
+			});
+	    });
+    </script>
+	<style type="text/css">
+		#gallery {
+			background-color: #444;
+			padding: 10px;
+			width: 520px;
+		}
+		#gallery ul { list-style: none; }
+		#gallery ul li { display: inline; }
+		#gallery ul img {
+			border: 5px solid #3e3e3e;
+			border-width: 5px 5px 20px;
+		}
+		#gallery ul a:hover img {
+			border: 5px solid #fff;
+			border-width: 5px 5px 20px;
+			color: #fff;
+		}
+		#gallery ul a:hover { color: #fff; }
+	</style>
+	</head>
     <body >
-
         <table style="height:100%">
             <tr>
                 <td >
@@ -23,15 +54,18 @@
                             </td>
                         </tr>
                         <tr>
-                            <td ><table>
+                            <td>
+                            	<table>
                                     <tr>
                                         <td style="width:20px" ></td>
-                                        <td ><table style="width:726px" >
+                                        <td >
+                                        	<table style="width:726px" >                                                                               
                                                 <tr>
                                                     <td style="height:20px"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td ><table style="height:364px">
+                                                    <td >
+                                                    	<table style="height:364px">
                                                             <tr>
                                                                 <td style="width:390px" class="list4">
                                                                     <img src="images/title2_1.gif" alt="" style="margin:8px 0 0 6px"><br>
@@ -82,9 +116,35 @@
                                                                     </div>
                                                                 </td>
                                                             </tr>
-
-
-                                                    </table></td>
+                                                    	</table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td valign="middle">
+                                                        <div style="margin-top:20px;">
+															<h2 id="productos" class="list4" ><strong>Nuestros productos</strong></h2>
+															<p>Cliquee en la im&aacute;genes para ver sus detalles.</p>
+															<div id="gallery" style="width:726px" >
+															    <ul>
+															        <li>
+															            <a href="images/800x600/bobinadora-papel-1.jpg" title="Mod 318PI. Contador Digital">
+															                <img src="images/thumbs/bobinadora-papel-1.jpg" width="72" height="72" alt="Medidor de Cables" />
+															            </a>
+															        </li>
+															        <li>
+															            <a href="images/800x600/bobinadora-papel-2.jpg" title="Mod 318PI. Contador Digital">
+															                <img src="images/thumbs/bobinadora-papel-2.jpg" width="72" height="72" alt="Medidor de Cables" />
+															            </a>
+															        </li>
+															        <li>
+															            <a href="images/maquina_SPM_A0223.jpg" title="Mod 160PI. Contador Mec&aacute;nico">
+															                <img src="images/maquina_SPM_A0223.jpg" width="72" height="72" alt="Medidor de Cables" />
+															            </a>
+															        </li>
+															    </ul>
+															</div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td align="center" valign="middle">
@@ -98,10 +158,12 @@
                                                         ?>
                                                     </td>
                                                 </tr>
-                                        </table></td>
+                                        	</table>
+                                        </td>
                                         <td style="width:20px" ></td>
                                     </tr>
-                            </table></td>
+                            	</table>
+                            </td>
                         </tr>
                     </table>
                 </td>
