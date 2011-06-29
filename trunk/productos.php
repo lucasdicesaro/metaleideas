@@ -119,6 +119,15 @@
                                                     	</table>
                                                     </td>
                                                 </tr>
+<?php
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+include 'config.php';
+error_reporting(E_ALL & ~E_DEPRECATED);
+$link = mysql_connect ($host, $user, $password) or die ("<center>No se puede conectar con la base de datos\n</center>\n");
+?>
                                                 <tr>
                                                     <td valign="middle">
                                                         <div style="margin-top:20px;">
@@ -126,26 +135,28 @@
 															<p>Cliquee en la im&aacute;genes para ver sus detalles.</p>
 															<div id="gallery" style="width:726px" >
 															    <ul>
-															        <li>
-															            <a href="images/800x600/bobinadora-papel-1.jpg" title="Mod 318PI. Contador Digital">
-															                <img src="images/thumbs/bobinadora-papel-1.jpg" width="72" height="72" alt="Medidor de Cables" />
-															            </a>
-															        </li>
-															        <li>
-															            <a href="images/800x600/bobinadora-papel-2.jpg" title="Mod 318PI. Contador Digital">
-															                <img src="images/thumbs/bobinadora-papel-2.jpg" width="72" height="72" alt="Medidor de Cables" />
-															            </a>
-															        </li>
-															        <li>
-															            <a href="images/maquina_SPM_A0223.jpg" title="Mod 160PI. Contador Mec&aacute;nico">
-															                <img src="images/maquina_SPM_A0223.jpg" width="72" height="72" alt="Medidor de Cables" />
-															            </a>
-															        </li>
+<?php
+   $tablename="productos";
+   $query="SELECT * FROM $tablename;";
+   $result=mysql_db_query ($dbname, $query, $link);
+   while ($row = mysql_fetch_array ($result))
+   {
+      print ("<li>");
+      print ("<a href=\"images/800x600/$row[nombre_foto]\" title=\"$row[titulo]\">\n");
+      print ("<img src=\"images/thumbs/$row[nombre_foto]\" width=\"72\" height=\"72\" alt=\"$row[titulo]\" />\n");
+      print ("</a>");
+      print ("</li>");
+    }
+    mysql_free_result($result);
+?>
 															    </ul>
 															</div>
                                                         </div>
                                                     </td>
                                                 </tr>
+<?php
+mysql_close($link);
+?>
                                                 <tr>
                                                     <td align="center" valign="middle">
                                                         <div nowrap="nowrap" class="list4" style="font-size:16px;height:35px;margin-top:20px;"><b><a target="_blank" href="http://www.metaleideas.blogspot.com/">¡¡¡ Vea nuestros &uacute;ltimos productos !!!</a></b></div>
