@@ -15,7 +15,8 @@
 	if($_REQUEST['titulo']!="")
 	{
 		$tit=htmlentities($_REQUEST['titulo']);
-		mysql_query("INSERT INTO productos (titulo) VALUES ('$tit');");
+		$nombre_foto=htmlentities($_REQUEST['nombreFoto']);
+		mysql_query("INSERT INTO productos (nombre_foto, titulo) VALUES ('$nombre_foto','$tit');");
         $resultado='true';
 	}
     mysql_close($link);
