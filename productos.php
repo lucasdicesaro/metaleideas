@@ -132,7 +132,7 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
                                                     <td valign="middle">
                                                         <div style="margin-top:20px;">
 															<h2 id="productos" class="list4" ><strong>Nuestros productos</strong></h2>
-															<p>Cliquee en la im&aacute;genes para ver sus detalles.</p>
+															<p>Cliquee en las im&aacute;genes para ver sus detalles.</p>
 															<div id="gallery" style="width:726px" >
 															    <ul>
 <?php
