@@ -31,14 +31,14 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
                                                 <tr>
                                                     <td ><table>
                                                             <tr>
-                                                                <td style="width:241px"><img src="images/title6_3.gif" alt="" style="margin:6px 0 0 16px"><br>
+                                                                <td><img src="images/title6_3.gif" alt="" style="margin:6px 0 0 16px"><br>
                                                                 <div style="overflow-y: scroll;height:350px" > 
 																	<table border="1" id="grilla" >
-																		<tr>
-																			<td><strong>Nombre</strong></td>
-																			<td><strong>Telefono</strong></td>
-																			<td><strong>Mail</strong></td>
-																			<td><strong>Mensaje</strong></td>
+																		<tr align="center">
+																			<td width="15%"><strong>Nombre</strong></td>
+																			<td width="15%"><strong>Telefono</strong></td>
+																			<td width="30%"><strong>Mail</strong></td>
+																			<td width="40%"><strong>Mensaje</strong></td>
 																		</tr>
 																		<?php
 																		   $tablename="contactos";
@@ -70,7 +70,7 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
                                                 </tr>
                                                 <tr>
                                                     <td style="height:50px">
-                                                    	<a href="contacto.php" class="link2">Volver a Contactos</a>
+                                                    	<a href="contacto.php" class="link2">Volver&nbsp;a&nbsp;Contactos</a>
                                                     </td>
                                                 </tr>																		
                                                 <tr>
