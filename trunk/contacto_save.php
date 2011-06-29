@@ -15,7 +15,6 @@
 
 	if($_REQUEST['mensaje']!="")
 	{
-		if($jahr=="")$jahr="NULL";
 		$nom=htmlentities($_REQUEST['nombre']);
 		$tel=htmlentities($_REQUEST['telefono']);
 		$mail=htmlentities($_REQUEST['mail']);
