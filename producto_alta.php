@@ -5,6 +5,34 @@
         <meta http-equiv="Content-Style-Type" content="text/css">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link href="style.css" type="text/css" rel="stylesheet">
+        
+	    <link href="uploadify/uploadify.css" type="text/css" rel="stylesheet" />
+	    <script type="text/javascript" src="uploadify/jquery-1.4.2.min.js"></script>
+	    <script type="text/javascript" src="uploadify/swfobject.js"></script>
+	    <script type="text/javascript" src="uploadify/jquery.uploadify.v2.1.4.min.js"></script>
+	    <script type="text/javascript">
+	    $(document).ready(function() {
+	      $('#file_thumbs_upload').uploadify({
+	        'uploader'  : 'uploadify/uploadify.swf',
+	        'script'    : 'uploadify/uploadify.php',
+	        'cancelImg' : 'uploadify/cancel.png',
+	        'folder'    : 'images/thumbs',
+	        'auto'      : true
+	      });
+	    });
+	    $(document).ready(function() {
+	      $('#file_upload').uploadify({
+	        'uploader'  : 'uploadify/uploadify.swf',
+	        'script'    : 'uploadify/uploadify.php',
+	        'cancelImg' : 'uploadify/cancel.png',
+	        'folder'    : 'images/800x600',
+	        'auto'      : true
+	      });
+	    });
+	    </script>
+        
+        
+        
         <script  language="javascript">
             function trim(value) {
                 return value.replace(/^\s+|\s+$/,'');
@@ -25,12 +53,25 @@
                     return false;
                 }
 
+                if (isComponenteVacio(form.nombreFoto, "Nombre Foto:", "nombreFotoDiv")) {
+                    return false;
+                }
+
                 return true;
             };
 
+            function setMensaje(componenteId, mensaje) {
+    		    object = document.getElementById(componenteId);
+    		    if (document.all) {//IE
+    		        object.innerText = mensaje;
+    		    } else {
+    		        object.textContent = mensaje;
+    		    }
+    		}
+
             function limpiarMensajes() {
                 setMensaje("tituloDiv", "");
-
+                setMensaje("nombreFotoDiv", "");
             }
 
             function enviarProducto() {
@@ -66,8 +107,29 @@
                                                                     <form action="producto_save.php" enctype="multipart/form-data" id="form">
                                                                         <table style="margin-left:19px" class="form">
                                                                             <tr>
-                                                                                <td style="height:34px">T&iacute;tulo de la foto: <input name="titulo" type="text">
+                                                                                <td width="200px" style="height:34px">T&iacute;tulo de la foto:</td>
+                                                                                <td>
+                                                                                	<input name="titulo" type="text">
                                                                                     <div id="tituloDiv" class="mensajeErr"></div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="height:34px">Nombre del archivo de la foto:</td>
+                                                                                <td>
+                                                                                	<input name="nombreFoto" type="text">
+                                                                                    <div id="nombreFotoDiv" class="mensajeErr"></div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="height:50px">Imagen 800x600px:</td>
+                                                                                <td style="height:50px">
+                                                                                	<input id="file_upload" name="file_upload" type="file" />
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="height:50px">Imagen 72x72px:</td>
+                                                                                <td style="height:50px">
+                                                                                	<input id="file_thumbs_upload" name="file_thumbs_upload" type="file" />
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
