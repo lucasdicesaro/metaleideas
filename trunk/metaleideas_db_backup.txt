@@ -11,5 +11,5 @@ CREATE TABLE `productos` (
   `titulo` varchar(150) NOT NULL default ''
 );
 
-INSERT INTO `metaleideasdb`.`productos`(`nombre_foto`,`titulo`)VALUES('bobinadora-papel-1.jpg', 'Bobinadora de papel');
-INSERT INTO `metaleideasdb`.`productos`(`nombre_foto`,`titulo`)VALUES('bobinadora-papel-2.jpg', 'Bobinadora de papel');
+INSERT INTO `productos`(`nombre_foto`,`titulo`)VALUES('bobinadora-papel-1.jpg', 'Bobinadora de papel');
+INSERT INTO `productos`(`nombre_foto`,`titulo`)VALUES('bobinadora-papel-2.jpg', 'Bobinadora de papel');
