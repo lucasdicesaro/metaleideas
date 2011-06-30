@@ -1,7 +1,4 @@
 
-USE metaleideasdb;
--- --------------------------------------------------------
-
 CREATE TABLE `contactos` (
   `nombre` varchar(30) NOT NULL default '',
   `telefono` varchar(20) NOT NULL default '',
