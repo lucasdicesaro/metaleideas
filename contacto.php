@@ -4,7 +4,7 @@
         <title>Contacto, Metal E Ideas, Mail</title>
         <meta http-equiv="Content-Style-Type" content="text/css">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link href="style.css" type="text/css" rel="stylesheet">
+        <link href="css/style.css" type="text/css" rel="stylesheet">
         <script  language="javascript">
             function trim(value) {
                 return value.replace(/^\s+|\s+$/,'');
@@ -234,7 +234,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="height:100%">
+                <td>
                     <table class="footer1" align="center">
                         <tr>
                             <td ></td>

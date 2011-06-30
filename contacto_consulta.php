@@ -9,10 +9,9 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
 ?>
 <html>
 <head>
-<link href="style.css" type="text/css" rel="stylesheet">
+	<link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-
         <table style="height:100%">
             <tr>
                 <td >
@@ -92,7 +91,7 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
         </table>
 	</body>
 </html>
-<script>
+<script type="text/javascript">
 <?
 if ($_REQUEST['r'] == "true") {
     echo('setMensaje("successDiv", "Hemos recibido su mensaje. En breve lo estaremos contactando.");');
