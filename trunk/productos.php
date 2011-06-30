@@ -4,7 +4,7 @@
     <title>Medidor de Cables, Metal e Ideas, Automatico, Cables, Medidor, Medicion, Contador, Mecanico</title>
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../style-projects-jquery.css" />    
     
     <script type="text/javascript" src="js/jquery.js"></script>
@@ -41,7 +41,7 @@
 	</style>
 	</head>
     <body >
-        <table style="height:100%">
+        <table>
             <tr>
                 <td >
                     <table class="style" align="center">
@@ -60,9 +60,7 @@
                                         <td style="width:20px" ></td>
                                         <td >
                                         	<table style="width:726px" >                                                                               
-                                                <tr>
-                                                    <td style="height:20px"></td>
-                                                </tr>
+<!--
                                                 <tr>
                                                     <td >
                                                     	<table style="height:364px">
@@ -75,7 +73,6 @@
                                                                         <strong>Mod 318PI.<br>Contador Digital</strong>
                                                                         <p style="text-align:justify">Máquina portátil que facilita y agiliza la atención del público de su empresa al medir grandes longitudes de cable con <span>mayor exactitud y en el menor tiempo</span>, siendo de fácil uso para el operario.</p>
                                                                         <p style="text-align:justify">La medidora permitirá: Medir y enrollar en una sola operación, cables de todo tipo con exactitud, no arrugando, ni quebrándolos. Posee molinete porta cable y un contador digital de muy fácil lectura, <span>autónomo</span> ya que no necesita alimentación 220 v.</p><br>
-                                                                        <!--br style="line-height:15px"-->                                                                        
                                                                     </div>
                                                                 </td>
                                                                 <td class="bg3">
@@ -85,13 +82,11 @@
                                                                     <img src="images/title2_2.gif" alt="" style="margin:8px 0 0 17px"><br>
                                                                     <br style="line-height:16px">
                                                                     <div style="margin-left:20px; width:345px" class="list">
-                                                                        <!--img src="images/medidor-cable-rueda.jpg" align="left" style="margin:2px 23px 0 0" alt="Medidor Cable" height="200px" width="150px" border="0"-->
                                                                         <strong>Innovación, creatividad y practicidad.</strong>
                                                                         <p style="text-align:justify">Es cómoda para el traslado inclusive por lugares angostos su ancho máximo es de 30cm, tiene alternativa de desmontar su base y colocarla en un lugar fijo como un estante o mostrador. En su base posee estante porta herramienta, ruedas y patines antideslizantes, la cual la dota de total autonomía, sin por ello perder firmeza y estabilidad.</p>
                                                                         <p style="text-align:justify">Toda su estructura esta montada sobre doble rulemanes blindados, otorgando a la misma <span>practicidad y suavidad</span> en su operación. No necesita mantenimiento por su robustez y materiales de primera calidad dando mucha vida útil, pintada con pintura microtexturada epoxi.</p>
                                                                         <p style="text-align:justify">La medidora ideal para obtener una medida exacta segura rápida y ordenada, ahorrándole tiempo, dinero y aumentando su eficiencia comercial.</p>
                                                                         <br style="line-height:15px">
-                                                                        <!--a href="index-5.html">Contáctenos</a-->
                                                                     </div>
                                                                 </td>
                                                             </tr>
@@ -119,6 +114,7 @@
                                                     	</table>
                                                     </td>
                                                 </tr>
+-->
 <?php
 /* 
  * To change this template, choose Tools | Templates
@@ -128,32 +124,32 @@ include 'config.php';
 error_reporting(E_ALL & ~E_DEPRECATED);
 $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede conectar con la base de datos\n</center>\n");
 ?>
-                                                <tr>
-                                                    <td valign="middle">
-                                                        <div style="margin-top:20px;">
-															<h2 id="productos" class="list4" ><strong>Nuestros productos</strong></h2>
-															<p>Cliquee en las im&aacute;genes para ver sus detalles.</p>
-															<div id="gallery" style="width:726px" >
-															    <ul>
-<?php
-   $tablename="productos";
-   $query="SELECT * FROM $tablename;";
-   $result=mysql_db_query ($dbname, $query, $link);
-   while ($row = mysql_fetch_array ($result))
-   {
-      print ("<li>");
-      print ("<a href=\"images/800x600/$row[nombre_foto]\" title=\"$row[titulo]\">\n");
-      print ("<img src=\"images/thumbs/$row[nombre_foto]\" width=\"72\" height=\"72\" alt=\"$row[titulo]\" />\n");
-      print ("</a>");
-      print ("</li>");
-    }
-    mysql_free_result($result);
-?>
-															    </ul>
-															</div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+<tr>
+	<td>
+		<div>
+			<h2 id="productos" class="list4" ><strong>Nuestros productos</strong></h2>
+			<p>Cliquee en las im&aacute;genes para ver sus detalles.</p>
+			<div id="gallery" style="width:726px" >
+				<ul>
+					<?php
+					   $tablename="productos";
+					   $query="SELECT * FROM $tablename;";
+					   $result=mysql_db_query ($dbname, $query, $link);
+					   while ($row = mysql_fetch_array ($result))
+					   {
+					      print ("<li>");
+					      print ("<a href=\"images/800x600/$row[nombre_foto]\" title=\"$row[titulo]\">\n");
+					      print ("<img src=\"images/thumbs/$row[nombre_foto]\" width=\"72\" height=\"72\" alt=\"$row[titulo]\" />\n");
+					      print ("</a>");
+					      print ("</li>");
+					    }
+					    mysql_free_result($result);
+					?>
+			    </ul>
+			</div>
+		</div>
+	</td>
+</tr>
 <?php
 mysql_close($link);
 ?>
@@ -180,7 +176,7 @@ mysql_close($link);
                 </td>
             </tr>
             <tr>
-                <td style="height:100%">
+                <td>
                     <table class="footer1" align="center">
                         <tr>
                             <td ></td>

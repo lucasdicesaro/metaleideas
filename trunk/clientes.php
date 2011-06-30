@@ -4,11 +4,9 @@
     <title></title>
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link href="style.css" type="text/css" rel="stylesheet">
-
-
-    <body >
-
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+	</head>
+    <body>
         <table style="height:100%">
             <tr>
                 <td >
@@ -98,7 +96,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="height:100%">
+                <td>
                     <table class="footer1" align="center">
                         <tr>
                             <td ></td>

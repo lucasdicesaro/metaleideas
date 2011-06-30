@@ -9,7 +9,7 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
 ?>
 <html>
 <head>
-	<link href="style.css" type="text/css" rel="stylesheet">
+	<link href="css/style.css" type="text/css" rel="stylesheet">
 	<script type="text/javascript">
 		function setMensaje(componenteId, mensaje) {
 		    object = document.getElementById(componenteId);
@@ -81,8 +81,8 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
                                                 </tr>
                                                 <tr>
                                                     <td style="height:50px" >
-                                                    	<a href="productos.php" class="link2">Volver&nbsp;a&nbsp;Productos</a>
-                                                    	<a href="producto_alta.php" class="link2">Alta&nbsp;Productos</a>
+                                                    	<a href="productos.php" class="link2">Salir</a>
+                                                    	<a href="producto_alta.php" class="link2">Subir&nbsp;Foto</a>
                                                     </td>
                                                 </tr>																		
                                                 <tr>

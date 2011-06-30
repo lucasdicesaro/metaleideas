@@ -4,7 +4,7 @@
         <title>Contacto, Metal E Ideas, Mail</title>
         <meta http-equiv="Content-Style-Type" content="text/css">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link href="style.css" type="text/css" rel="stylesheet">
+        <link href="css/style.css" type="text/css" rel="stylesheet">
         
 	    <link href="uploadify/uploadify.css" type="text/css" rel="stylesheet" />
 	    <script type="text/javascript" src="uploadify/jquery-1.4.2.min.js"></script>
@@ -17,7 +17,10 @@
 	        'script'    : 'uploadify/uploadify.php',
 	        'cancelImg' : 'uploadify/cancel.png',
 	        'folder'    : 'images/thumbs',
-	        'auto'      : true
+	        'auto'      : true,
+	        'fileExt'   : '*.jpg;*.gif;*.png',
+	        'fileDesc'  : 'Web Image Files (.JPG, .GIF, .PNG)',
+			'sizeLimit' : 10240
 	      });
 	    });
 	    $(document).ready(function() {
@@ -26,8 +29,11 @@
 	        'script'    : 'uploadify/uploadify.php',
 	        'cancelImg' : 'uploadify/cancel.png',
 	        'folder'    : 'images/800x600',
-	        'auto'      : true
-	      });
+	        'auto'      : true,
+	        'fileExt'   : '*.jpg;*.gif;*.png',
+	        'fileDesc'  : 'Web Image Files (.JPG, .GIF, .PNG)',
+			'sizeLimit' : 102400
+		   });
 	    });
 	    </script>
         
@@ -107,7 +113,7 @@
                                                                     <form action="producto_save.php" enctype="multipart/form-data" id="form">
                                                                         <table style="margin-left:19px" class="form">
                                                                             <tr>
-                                                                                <td width="200px" style="height:34px">T&iacute;tulo de la foto:</td>
+                                                                                <td width="250px" style="height:34px">T&iacute;tulo de la foto:</td>
                                                                                 <td>
                                                                                 	<input name="titulo" type="text">
                                                                                     <div id="tituloDiv" class="mensajeErr"></div>
@@ -121,27 +127,29 @@
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td style="height:50px">Imagen 800x600px:</td>
+                                                                                <td style="height:50px">Imagen mediana (tama&ntilde;o 800x600px):</td>
                                                                                 <td style="height:50px">
                                                                                 	<input id="file_upload" name="file_upload" type="file" />
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td style="height:50px">Imagen 72x72px:</td>
+                                                                                <td style="height:50px">Imagen miniatura (tama&ntilde;o 72x72px):</td>
                                                                                 <td style="height:50px">
                                                                                 	<input id="file_thumbs_upload" name="file_thumbs_upload" type="file" />
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
+                                                                            	<td></td>
                                                                                 <td style="height:70px">
-                                                                                    <a href="#" onClick="document.getElementById('form').reset()" class="link1">Limpiar</a><img src="images/spacer.gif" alt="" width="9" height="1">
-                                                                                    <a href="#" onClick="return enviarProducto();" class="link2">Aceptar</a>
+                                                                                    <a href="#" onClick="return enviarProducto();" class="link2" title="Da de alta un nuevo producto">Guardar</a>
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td style="height:131px">
-                                                                                    <a href="productos.php" class="link2">Volver&nbsp;a&nbsp;Productos</a>
-                                                                                    <a href="producto_consulta.php" class="link2">Consultar&nbsp;Productos</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <a href="productos.php" class="link2" title="Muestra la solapa de productos">Salir</a>
+                                                                                    <a href="producto_consulta.php" class="link2" title="Muestra la grilla de los productos existentes">Volver</a>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>

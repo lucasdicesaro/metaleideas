@@ -4,7 +4,7 @@
     <title>Metal e Ideas, Medidores, Cables, Metalurgica, Metal, Ideas, Industria, Cable, Medidor, Metales, Medida</title>
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
     <body>
         <table style="height:100%">
             <tr>
@@ -112,7 +112,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="height:100%">
+                <td>
                     <table class="footer1" align="center">
                         <tr>
                             <td ></td>
