@@ -131,7 +131,7 @@
                                                                 <td style="width:484px"><img src="images/title6_1.gif" alt="" style="margin:6px 0 0 7px"><br>
                                                                     <br style="line-height:16px">
                                                                     <div style="margin-left:11px; width:455px">
-                                                                        <img src="images/ford-courrier.gif" height="120" align="left" style="margin:2px 23px 0 0" alt="">
+                                                                        <img src="images/rodado-metaleideas.jpg" height="120" align="left" style="margin:2px 23px 0 0" alt="">
                                                                         <strong>Metal e Ideas</strong><br>
                                                                         <br style="line-height:3px">
                                                                         Isleños 1661<img src="images/spacer.gif" alt="" width="20" height="1">Gregorio Laferrere<br>
