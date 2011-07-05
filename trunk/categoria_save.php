@@ -12,21 +12,19 @@
 	}
     mysql_select_db($dbname);
 
-	$query="SELECT MAX(orden)+1 FROM productos";
+	$query="SELECT MAX(orden)+1 FROM categorias";
 	$max_order=mysql_query ($query, $link);
 	$max_order = mysql_fetch_array($max_order, MYSQL_BOTH);
 	$next = $max_order[0];
-    if($_REQUEST['titulo']!="")
+	if($_REQUEST['nombre']!="")
 	{
-		$tit=htmlentities($_REQUEST['titulo']);
-		$nombre_foto=htmlentities($_REQUEST['nombreFoto']);
-		$categoria_id=htmlentities($_REQUEST['categoria']);
-		mysql_query("INSERT INTO productos (nombre_foto, titulo, orden, categoria_id) VALUES ('$nombre_foto','$tit', '$next','$categoria_id');");
+		$nom=htmlentities($_REQUEST['nombre']);
+		mysql_query("INSERT INTO categorias (nombre, orden) VALUES ('$nom','$next');");
         $resultado='true';
 	}
     mysql_close($link);
 ?>
-<meta http-equiv="REFRESH" content="0;url=producto_consulta.php?r=<?echo($resultado)?>">
+<meta http-equiv="REFRESH" content="0;url=categoria_consulta.php?r=<?echo($resultado)?>">
 </head>
 <body>
 </body>
