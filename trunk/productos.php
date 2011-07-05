@@ -68,32 +68,31 @@ include 'config.php';
 error_reporting(E_ALL & ~E_DEPRECATED);
 $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede conectar con la base de datos\n</center>\n");
 ?>
-<tr>
-	<td>
-		<div>
-			<h2 id="productos" class="list4" ><strong>Nuestros productos</strong></h2>
-			<p>Cliquee en las im&aacute;genes para ver sus detalles.</p>
-			<div id="gallery" style="width:726px" >
-				<ul>
-					<?php
-					   $tablename="productos";
-					   $query="SELECT * FROM $tablename;";
-					   $result=mysql_db_query ($dbname, $query, $link);
-					   while ($row = mysql_fetch_array ($result))
-					   {
-					      print ("<li>");
-					      print ("<a href=\"images/800x600/$row[nombre_foto]\" title=\"$row[titulo]\">\n");
-					      print ("<img src=\"images/thumbs/$row[nombre_foto]\" width=\"72\" height=\"72\" alt=\"$row[titulo]\" />\n");
-					      print ("</a>");
-					      print ("</li>");
-					    }
-					    mysql_free_result($result);
-					?>
-			    </ul>
-			</div>
-		</div>
-	</td>
-</tr>
+												<tr>
+													<td>
+														<div>
+															<h2 id="productos" class="list4" ><strong>Nuestros productos</strong></h2>
+															<p>Cliquee en las im&aacute;genes para ver sus detalles.</p>
+															<div id="gallery" style="width:726px" >
+																<ul>
+																	<?php
+																	   $query="SELECT * FROM productos;";
+																	   $result=mysql_db_query ($dbname, $query, $link);
+																	   while ($row = mysql_fetch_array ($result))
+																	   {
+																	      print ("<li>");
+																	      print ("<a href=\"images/800x600/$row[nombre_foto]\" title=\"$row[titulo]\">\n");
+																	      print ("<img src=\"images/thumbs/$row[nombre_foto]\" width=\"72\" height=\"72\" alt=\"$row[titulo]\" />\n");
+																	      print ("</a>");
+																	      print ("</li>");
+																	    }
+																	    mysql_free_result($result);
+																	?>
+															    </ul>
+															</div>
+														</div>
+													</td>
+												</tr>
 <?php
 mysql_close($link);
 ?>
