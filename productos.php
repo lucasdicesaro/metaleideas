@@ -5,14 +5,13 @@
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link href="css/style.css" type="text/css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="../style-projects-jquery.css" />    
-    
-    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.lightbox-0.5.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
 
     <script type="text/javascript">
-    // http://leandrovieira.com/projects/jquery/lightbox/
+    	// http://leandrovieira.com/projects/jquery/lightbox/
 	    $(function() {
 	        $('#gallery a').lightBox({
 	        	txtImage: 'Imagen',
@@ -59,62 +58,7 @@
                                     <tr>
                                         <td style="width:20px" ></td>
                                         <td >
-                                        	<table style="width:726px" >                                                                               
-<!--
-                                                <tr>
-                                                    <td >
-                                                    	<table style="height:364px">
-                                                            <tr>
-                                                                <td style="width:390px" class="list4">
-                                                                    <img src="images/title2_1.gif" alt="" style="margin:8px 0 0 6px"><br>
-                                                                    <br style="line-height:16px">
-                                                                    <div style="margin-left:20px; width:290px" class="list4">
-                                                                        <a href="http://www.metaleideas.blogspot.com/" target="_blank"><img src="images/medidor-cable-suavizado.gif" align="left" style="margin:2px 23px 0 0" alt="Medidor de Cables" border="0"></a>
-                                                                        <strong>Mod 318PI.<br>Contador Digital</strong>
-                                                                        <p style="text-align:justify">Máquina portátil que facilita y agiliza la atención del público de su empresa al medir grandes longitudes de cable con <span>mayor exactitud y en el menor tiempo</span>, siendo de fácil uso para el operario.</p>
-                                                                        <p style="text-align:justify">La medidora permitirá: Medir y enrollar en una sola operación, cables de todo tipo con exactitud, no arrugando, ni quebrándolos. Posee molinete porta cable y un contador digital de muy fácil lectura, <span>autónomo</span> ya que no necesita alimentación 220 v.</p><br>
-                                                                    </div>
-                                                                </td>
-                                                                <td class="bg3">
-                                                                    <img src="images/bg1_3.gif" alt="" align="top">
-                                                                </td>
-                                                                <td style="width:484px">
-                                                                    <img src="images/title2_2.gif" alt="" style="margin:8px 0 0 17px"><br>
-                                                                    <br style="line-height:16px">
-                                                                    <div style="margin-left:20px; width:345px" class="list">
-                                                                        <strong>Innovación, creatividad y practicidad.</strong>
-                                                                        <p style="text-align:justify">Es cómoda para el traslado inclusive por lugares angostos su ancho máximo es de 30cm, tiene alternativa de desmontar su base y colocarla en un lugar fijo como un estante o mostrador. En su base posee estante porta herramienta, ruedas y patines antideslizantes, la cual la dota de total autonomía, sin por ello perder firmeza y estabilidad.</p>
-                                                                        <p style="text-align:justify">Toda su estructura esta montada sobre doble rulemanes blindados, otorgando a la misma <span>practicidad y suavidad</span> en su operación. No necesita mantenimiento por su robustez y materiales de primera calidad dando mucha vida útil, pintada con pintura microtexturada epoxi.</p>
-                                                                        <p style="text-align:justify">La medidora ideal para obtener una medida exacta segura rápida y ordenada, ahorrándole tiempo, dinero y aumentando su eficiencia comercial.</p>
-                                                                        <br style="line-height:15px">
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td style="width:390px" class="list4">
-                                                                    <br style="line-height:16px">
-                                                                    <div style="margin-left:20px; width:290px" class="list4">
-                                                                        <a href="http://www.metaleideas.blogspot.com/" target="_blank"><img src="images/maquina-automatica-suavizada.gif" align="left" style="margin:2px 10px 0 0" alt="Medidor de Cables Automatico" height="100px" width="150px" border="0"></a>
-                                                                        <strong>Medidor de cables autom&aacute;tico con embriague y freno</strong>
-                                                                        <br style="line-height:15px">
-                                                                    </div>
-                                                                </td>
-                                                                <td class="bg3">
-                                                                    <img src="images/bg1_3.gif" alt="" align="top">
-                                                                </td>
-                                                                <td style="width:484px">
-                                                                    <br style="line-height:16px">
-                                                                    <div style="margin-left:20px; width:345px" class="list4">
-                                                                        <a href="http://www.metaleideas.blogspot.com/" target="_blank"><img src="images/maquina_SPM_A0223.jpg" align="left" style="margin:2px 10px 0 0" alt="Contador Mecanico" height="100px" width="150px" border="0"></a>
-                                                                        <strong>Mod 160PI.<br>Contador Mec&aacute;nico</strong>
-                                                                        <br style="line-height:15px">
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                    	</table>
-                                                    </td>
-                                                </tr>
--->
+                                        	<table style="width:726px" >
 <?php
 /* 
  * To change this template, choose Tools | Templates

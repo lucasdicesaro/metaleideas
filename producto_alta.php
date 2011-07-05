@@ -112,7 +112,35 @@
                                                                 <td style="width:241px"><img src="images/title6_3.gif" alt="" style="margin:6px 0 0 16px"><br>
                                                                     <form action="producto_save.php" enctype="multipart/form-data" id="form">
                                                                         <table style="margin-left:19px" class="form">
+<?php
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+include 'config.php';
+error_reporting(E_ALL & ~E_DEPRECATED);
+$link = mysql_connect ($host, $user, $password) or die ("<center>No se puede conectar con la base de datos\n</center>\n");
+?>
                                                                             <tr>
+                                                                                <td width="250px" style="height:34px">Categor&iacute;a:</td>
+                                                                                <td>
+                                                                                	<select name="categoria">
+																						<?php
+																							   $query="SELECT * FROM categorias ORDER BY orden";
+																							   $result=mysql_db_query ($dbname, $query, $link);
+																							   while ($row = mysql_fetch_array ($result))
+																							   {
+																							      print ("<option value=\"$row[categoria_id]\">$row[nombre]</option>\n");
+																							   }
+																							   mysql_free_result($result);
+																						?>
+                                                                                	</select>
+                                                                                </td>
+                                                                            </tr>
+<?php
+mysql_close($link);
+?>
+																			<tr>
                                                                                 <td width="250px" style="height:34px">T&iacute;tulo de la foto:</td>
                                                                                 <td>
                                                                                 	<input name="titulo" type="text">
