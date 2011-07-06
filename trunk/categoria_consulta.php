@@ -5,7 +5,8 @@
  */
 include 'config.php';
 error_reporting(E_ALL & ~E_DEPRECATED);
-$link = mysql_connect ($host, $user, $password) or die ("<center>No se puede conectar con la base de datos\n</center>\n");
+mysql_connect ($host, $user, $password) or die ("<center>No se puede conectar con la base de datos\n</center>\n");
+mysql_select_db($dbname) or die ('Cant select Database');
 ?>
 <html>
 <head>
@@ -26,10 +27,29 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
 		}
 
 	    // http://jqueryui.com/demos/sortable/
-		$(function() {
-			$("#sortable").sortable();
-			$("#sortable").disableSelection();
-		});
+//		$(function() {
+//			$("#sortable").sortable();
+//			$("#sortable").disableSelection();
+//		});
+		// http://www.hdeya.com/blog/2009/05/sorting-items-on-the-fly-ajax-using-jquery-ui-sortable-php-mysql/
+		$(document).ready(
+			function() {
+				$("#sortable").sortable({
+					update : function () {
+						serial = $('#sortable').sortable('serialize');
+						alert("serial: " + serial);
+						$.ajax({
+							url: "categoria_update.php",
+							type: "post",
+							data: serial,
+							error: function() {
+								alert("theres an error with AJAX");
+							}
+						});
+					}
+				});
+			}
+		);
     </script>
 	<style type="text/css">
 		#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
@@ -51,7 +71,7 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
                                                     <td style="height:20px"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="height:20px" class="list4"><h2>Metal e Ideas</h2> <strong>Consulta de productos</strong></td>
+                                                    <td style="height:20px" class="list4"><h2>Metal e Ideas</h2> <strong>Consulta de categor&iacute;as</strong></td>
                                                 </tr>
                                                 <tr>
                                                     <td ><table>
@@ -65,43 +85,13 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
                                                                 <td><img src="images/title6_3.gif" alt="" style="margin:6px 0 0 16px"><br>
                                                                 <div style="overflow-y: scroll;height:350px" >
 																	<ul id="sortable">
-																	<?php
-																	   $tablename="categorias";
-																	   $query="SELECT * FROM $tablename;";
-																	   $result=mysql_db_query ($dbname, $query, $link);
-																	   while ($row = mysql_fetch_array ($result))
-																	   {
-																	      print ("<li class=\"ui-state-default\"><span class=\"ui-icon ui-icon-arrowthick-2-n-s\"></span>$row[nombre]</li>\n");
-																	   }
-																	   mysql_free_result($result);
+																	<?
+																		$result = mysql_query("SELECT * FROM `categorias` ORDER BY `orden` ASC") or die(mysql_error());
+																		while($row = mysql_fetch_array($result)) {
+																			echo '<li class="ui-state-default" id="categoria_' . $row['categoria_id'] . '"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>' . $row['nombre'] . "</li>\n";
+																		}
 																	?>
 																	</ul>
-<!--                                                                 
-																	<table border="1" id="grilla">
-																		<tr align="center">
-																			<td width="10%"><strong>Categoria Id</strong></td>
-																			<td width="80%"><strong>Nombre</strong></td>
-																			<td width="10%"><strong>Orden</strong></td>
-																		</tr>
-																		<?php
-																		   $tablename="categorias";
-																		   $query="SELECT * FROM $tablename;";
-																		   $result=mysql_db_query ($dbname, $query, $link);
-																		   while ($row = mysql_fetch_array ($result))
-																		   {
-																		      print ("<TR>");
-																		      print ("<TD>$row[categoria_id]</TD>\n");
-																		      print ("<TD>$row[nombre]</TD>\n");
-																		      print ("<TD>$row[orden]</TD>\n");
-																		      print ("</TR>");
-																		   }
-																		   mysql_free_result($result);
-																		?>
-																	</table>
--->
-																	<?php
-																	mysql_close($link);
-																	?>
 																	</div>
                                                                 </td>
                                                             </tr>
