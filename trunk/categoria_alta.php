@@ -52,6 +52,7 @@
             			data: "nombre=" + $("#nombre").val(),
             			success: function(data) {
             				$("#successDiv").html("La creacion fue exitosa");
+            				$("#nombre").val("");
             			},
             			error: function() {
             				$("#errorDiv").html("Ocurrio un error al intentar crear el item");

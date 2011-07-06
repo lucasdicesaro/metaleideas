@@ -163,7 +163,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <a href="productos.php" class="link2" title="Muestra la solapa de productos">Salir</a>
-                                                                                    <a href="producto_consulta.php" class="link2" title="Muestra la grilla de los productos existentes">Volver</a>
+                                                    								<a href="categoria_consulta.php" class="link2">Ver categor&iacute;as</a>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
