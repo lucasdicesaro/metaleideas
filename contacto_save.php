@@ -5,6 +5,8 @@
 <?
     include 'config.php';
     $resultado='false';
+    error_reporting(E_ALL & ~E_DEPRECATED);
+    error_reporting(E_ERROR | E_PARSE);
     // Connecting to Database
 	mysql_connect ($host, $user, $password) or die ('Cant Connect to MySQL');
 	// Selecting Database
