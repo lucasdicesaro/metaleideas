@@ -54,6 +54,10 @@
 				}
 			});
 		}
+
+		function buscarproductosxcategoria(categoria_id) {
+			document.location.href="producto_consulta.php?categoria_id="+categoria_id;
+		}
     </script>
 </head>
 	<body>

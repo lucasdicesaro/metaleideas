@@ -20,7 +20,10 @@
 	        'auto'      : true,
 	        'fileExt'   : '*.jpg;*.gif;*.png',
 	        'fileDesc'  : 'Web Image Files (.JPG, .GIF, .PNG)',
-			'sizeLimit' : 10240
+			'sizeLimit' : 10240,
+			'onComplete': function(event, queueID, fileObj, response, data) {
+	        	$("#nombreFoto").val(fileObj['name']);
+			}
 	      });
 	    });
 	    $(document).ready(function() {
@@ -32,8 +35,11 @@
 	        'auto'      : true,
 	        'fileExt'   : '*.jpg;*.gif;*.png',
 	        'fileDesc'  : 'Web Image Files (.JPG, .GIF, .PNG)',
-			'sizeLimit' : 102400
-		   });
+			'sizeLimit' : 102400,
+			'onComplete': function(event, queueID, fileObj, response, data) {
+	        	$("#nombreFoto").val(fileObj['name']);
+			}
+		  });
 	    });
 	    </script>
         
@@ -58,11 +64,6 @@
                 if (isComponenteVacio(form.titulo, "Titulo:", "tituloDiv")) {
                     return false;
                 }
-
-                if (isComponenteVacio(form.nombreFoto, "Nombre Foto:", "nombreFotoDiv")) {
-                    return false;
-                }
-
                 return true;
             };
 
@@ -77,10 +78,9 @@
 
             function limpiarMensajes() {
                 setMensaje("tituloDiv", "");
-                setMensaje("nombreFotoDiv", "");
             }
 
-            function enviarProducto() {
+            function save() {
                 limpiarMensajes();
                 if (isProductoValido()) {
                     document.getElementById('form').submit();
@@ -113,45 +113,30 @@
                                                                     <form action="producto_save.php" enctype="multipart/form-data" id="form">
                                                                         <table style="margin-left:19px" class="form">
 <?php
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-include 'config.php';
-error_reporting(E_ALL & ~E_DEPRECATED);
-$link = mysql_connect ($host, $user, $password) or die ("<center>No se puede conectar con la base de datos\n</center>\n");
+	include 'config.php';
+	error_reporting(E_ALL & ~E_DEPRECATED);
+	mysql_connect ($host, $user, $password) or die ("<center>No se puede conectar con la base de datos\n</center>\n");
+	mysql_select_db($dbname) or die ('Cant select Database');
 ?>
                                                                             <tr>
                                                                                 <td width="250px" style="height:34px">Categor&iacute;a:</td>
                                                                                 <td>
                                                                                 	<select name="categoria">
 																						<?php
-																							   $query="SELECT * FROM categorias ORDER BY orden";
-																							   $result=mysql_db_query ($dbname, $query, $link);
+																							   $result = mysql_query("SELECT * FROM `categorias` ORDER BY `orden` ASC") or die(mysql_error());
 																							   while ($row = mysql_fetch_array ($result))
 																							   {
 																							      echo utf8_encode("<option value=\"$row[categoria_id]\">$row[nombre]</option>\n");
 																							   }
-																							   mysql_free_result($result);
 																						?>
                                                                                 	</select>
                                                                                 </td>
                                                                             </tr>
-<?php
-mysql_close($link);
-?>
 																			<tr>
                                                                                 <td width="250px" style="height:34px">T&iacute;tulo de la foto:</td>
                                                                                 <td>
                                                                                 	<input name="titulo" type="text">
                                                                                     <div id="tituloDiv" class="mensajeErr"></div>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td style="height:34px">Nombre del archivo de la foto:</td>
-                                                                                <td>
-                                                                                	<input name="nombreFoto" type="text">
-                                                                                    <div id="nombreFotoDiv" class="mensajeErr"></div>
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
@@ -169,7 +154,8 @@ mysql_close($link);
                                                                             <tr>
                                                                             	<td></td>
                                                                                 <td style="height:70px">
-                                                                                    <a href="#" onClick="return enviarProducto();" class="link2" title="Da de alta un nuevo producto">Guardar</a>
+		                                                                            <input id="nombreFoto" name="nombreFoto" type="hidden" />
+                                                                                    <a href="#" onClick="return save();" class="link2" title="Da de alta un nuevo producto">Guardar</a>
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>

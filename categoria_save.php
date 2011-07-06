@@ -12,8 +12,8 @@
 	$max_order = mysql_query ($query);
 	$max_order = mysql_fetch_array($max_order, MYSQL_BOTH);
 	$next = $max_order[0];
-	if($_REQUEST['nombre']!="")
-	{
+
+	if(isset($_REQUEST['nombre'])) {
 		$nom=htmlentities($_REQUEST['nombre']);
 		mysql_query("INSERT INTO categorias (nombre, orden) VALUES ('$nom','$next');");
 	}
