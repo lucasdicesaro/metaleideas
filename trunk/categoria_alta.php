@@ -5,7 +5,9 @@
         <meta http-equiv="Content-Style-Type" content="text/css">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link href="css/style.css" type="text/css" rel="stylesheet">
-        
+
+	    <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+
         <script  language="javascript">
             function trim(value) {
                 return value.replace(/^\s+|\s+$/,'');
@@ -44,11 +46,20 @@
             function save() {
                 limpiarMensajes();
                 if (isItemValido()) {
-                    document.getElementById('form').submit();
-                }
-
+					$.ajax({
+            			url: "categoria_save.php",
+            			type: "post",
+            			data: "nombre=" + $("#nombre").val(),
+            			success: function(data) {
+            				$("#successDiv").html("La creacion fue exitosa");
+            			},
+            			error: function() {
+            				$("#errorDiv").html("Ocurrio un error al intentar crear el item");
+            			}
+            		});
+				};
                 return false;
-            };
+			}
         </script>
     </head>
     <body >
@@ -68,7 +79,14 @@
                                                     <td style="height:20px" class="list4"><h2>Metal e Ideas</h2> <strong>Alta Categor&iacute;as</strong></td>
                                                 </tr>
                                                 <tr>
-                                                    <td ><table>
+                                                    <td>
+                                                    	<table>
+															<tr>
+																<td width="50" height="30" >
+																	<div id="successDiv" class="mensajeSucc" ></div>
+																	<div id="errorDiv" class="mensajeErr" ></div>
+																</td>
+															</tr>
                                                             <tr>
                                                                 <td style="width:241px"><img src="images/title6_3.gif" alt="" style="margin:6px 0 0 16px"><br>
                                                                     <form action="categoria_save.php" enctype="multipart/form-data" id="form">
@@ -76,7 +94,7 @@
                                                                             <tr>
                                                                                 <td width="250px" style="height:34px">Nombre de la categor&iacute;a:</td>
                                                                                 <td>
-                                                                                	<input name="nombre" type="text" maxlength="99">
+                                                                                	<input id="nombre" name="nombre" type="text" maxlength="99">
                                                                                     <div id="nombreDiv" class="mensajeErr"></div>
                                                                                 </td>
                                                                             </tr>

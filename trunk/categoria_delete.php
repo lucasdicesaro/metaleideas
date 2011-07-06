@@ -9,9 +9,9 @@
 	// Selecting Database
 	mysql_select_db($dbname) or die ('Cant select Database');
 	
-	$categoria = $_POST['categoria'];
-	for($i = 0; $i < count($categoria); $i++) {
-		mysql_query("UPDATE `categorias` SET `orden`=" . mysql_real_escape_string($i) . " WHERE `categoria_id`='" . mysql_real_escape_string($categoria[$i]) . "'") or die(mysql_error());
+	$categoria_id = $_POST['categoria_id'];
+	if($_POST['categoria_id']!="") {
+		mysql_query("DELETE FROM `categorias` WHERE `categoria_id`='" . $categoria_id . "'") or die(mysql_error());
 	}
 ?>
 

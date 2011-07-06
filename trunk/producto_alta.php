@@ -130,7 +130,7 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
 																							   $result=mysql_db_query ($dbname, $query, $link);
 																							   while ($row = mysql_fetch_array ($result))
 																							   {
-																							      print ("<option value=\"$row[categoria_id]\">$row[nombre]</option>\n");
+																							      echo utf8_encode("<option value=\"$row[categoria_id]\">$row[nombre]</option>\n");
 																							   }
 																							   mysql_free_result($result);
 																						?>
