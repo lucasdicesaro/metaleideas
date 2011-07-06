@@ -25,6 +25,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Table structure for table `contactos`
 --
 DROP TABLE `contactos`; 
+
 CREATE TABLE `contactos` (
 	`contactos_id` INT NOT NULL AUTO_INCREMENT ,
 	`nombre` varchar(40) NOT NULL default '',
@@ -34,6 +35,7 @@ CREATE TABLE `contactos` (
 	`fecha_hora` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
 	PRIMARY KEY ( `contactos_id` )	
 ) ENGINE = InnoDB, CHARACTER SET utf8 COLLATE utf8_spanish_ci;
+
 
 --
 -- Dumping data for table `contactos`
