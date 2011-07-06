@@ -5,6 +5,7 @@
 	mysql_select_db($dbname) or die ('Cant select Database');
 	$result = mysql_query("SELECT * FROM `categorias` ORDER BY `orden` ASC") or die(mysql_error());
 	while($row = mysql_fetch_array($result)) {
-		echo '<li class="ui-state-default ui-corner-top ui-corner-bottom" id="categoria_' . $row['categoria_id'] . '"><span class="ui-icon ui-icon-arrowthick-2-n-s fl_left list-icon"></span>' . $row['nombre'] . '<span onclick="borrar(' . $row['categoria_id'] . ')" class="cursor-pointer ui-icon ui-icon-close fl_right"></span></li>';																			
+		echo '<li class="ui-state-default ui-corner-top ui-corner-bottom" id="categoria_' . $row['categoria_id'] . '"><span class="ui-icon ui-icon-arrowthick-2-n-s fl_left list-icon"></span>' . $row['nombre'] . '<span onclick="borrar(' . $row['categoria_id'] . ')" class="cursor-pointer ui-icon ui-icon-close fl_right" title="Eliminar categoria"></span><span onclick="buscarproductosxcategoria(' . $row['categoria_id'] . ')" class="cursor-pointer ui-icon ui-icon-search fl_right" title="Ver fotos de la categoria"></span></li>';																			
 	}
+	//http://jquery-ui.googlecode.com/svn/tags/1.6rc5/tests/static/icons.html
 ?>

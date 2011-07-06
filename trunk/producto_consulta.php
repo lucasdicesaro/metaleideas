@@ -10,27 +10,73 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
 <html>
 <head>
 	<link href="css/style.css" type="text/css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.14.custom.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/ui-darkness/jquery-ui-1.8.14.custom.css" media="screen" />
+
 	<script type="text/javascript">
-		function setMensaje(componenteId, mensaje) {
-		    object = document.getElementById(componenteId);
-		    if (document.all) {//IE
-		        object.innerText = mensaje;
-		    } else {
-		        object.textContent = mensaje;
-		    }
+		$(document).ready(
+			function() {
+				$("#sortable").sortable({
+					update : function () {
+						serial = $('#sortable').sortable('serialize');
+						$.ajax({
+							url: "producto_update.php",
+							type: "post",
+							data: serial,
+							error: function() {
+								alert("theres an error with AJAX");
+							}
+						});
+					}
+				});
+			}
+		);
+
+		function borrar(producto_id) {
+			var rta = confirm("El elemento se borrara. Esta seguro?");
+			if (rta) {
+				$.ajax({
+					url: "producto_delete.php",
+					type: "post",
+					data: "producto_id="+producto_id,
+					success: function(data) {
+						refreshItems();
+					},
+					error: function() {
+						alert("theres an error with AJAX");
+					}
+				});
+			}
+		}
+
+		function refreshItems() {
+			$.ajax({
+				url: "producto_select_encoded.php",
+				type: "post",
+				success: function(data) {
+					$('#sortable').html(data);				
+				},
+				error: function() {
+					alert("theres an error with AJAX");
+				}
+			});
 		}
 	</script>
 </head>
 	<body>
         <table style="height:100%">
             <tr>
-                <td >
+                <td>
                     <table class="style" align="center">
                         <tr>
-                            <td ><table>
+                            <td>
+                            	<table>
                                     <tr>
                                         <td style="width:20px" ></td>
-                                        <td ><table style="width:726px" >
+                                        <td>
+                                        	<table style="width:726px" >
                                                 <tr>
                                                     <td style="height:20px"></td>
                                                 </tr>
@@ -38,44 +84,17 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
                                                     <td style="height:20px" class="list4"><h2>Metal e Ideas</h2> <strong>Consulta de productos</strong></td>
                                                 </tr>
                                                 <tr>
-                                                    <td ><table>
+                                                    <td>
+                                                    	<table>
                                                             <tr>
-	                                                            <td width="50" height="30" >
-		                                                            <div id="successDiv" class="mensajeSucc" width="50"></div>
-		                                                            <div id="errorDiv" class="mensajeErr" width="50"></div>
-	                                                            </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><img src="images/title6_3.gif" alt="" style="margin:6px 0 0 16px"><br>
-                                                                <div style="overflow-y: scroll;height:350px" > 
-																	<table border="1" id="grilla">
-																		<tr align="center">
-																			<td width="10%"><strong>Producto Id</strong></td>
-																			<td width="35%"><strong>Nombre Foto</strong></td>
-																			<td width="35%"><strong>T&iacute;tulo</strong></td>
-																			<td width="10%"><strong>Orden</strong></td>
-																			<td width="10%"><strong>Categoria Id</strong></td>
-																		</tr>
-																		<?php
-																		   $tablename="productos";
-																		   $query="SELECT * FROM $tablename;";
-																		   $result=mysql_db_query ($dbname, $query, $link);
-																		   while ($row = mysql_fetch_array ($result))
-																		   {
-																		      print ("<TR>");
-																		      print ("<TD>$row[producto_id]</TD>\n");
-																		      print ("<TD>$row[nombre_foto]</TD>\n");
-																		      print ("<TD>$row[titulo]</TD>\n");
-																		      print ("<TD>$row[orden]</TD>\n");
-																		      print ("<TD>$row[categoria_id]</TD>\n");
-																		      print ("</TR>");
-																		   }
-																		   mysql_free_result($result);
-																		?>
-																	</table>
-																	<?php
-																	mysql_close($link);
-																	?>
+                                                                <td>
+                                                                	<img src="images/title6_3.gif" alt="" style="margin:6px 0 0 16px"><br>
+                                                                	<div style="overflow-y: scroll;height:350px" > 
+																		<ul id="sortable">
+																			<?
+																				include 'producto_select.php';
+																			?>																		
+                                										</ul>
 																	</div>
                                                                 </td>
                                                             </tr>
@@ -111,13 +130,3 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
         </table>
 	</body>
 </html>
-<script type="text/javascript">
-<?
-	if ($_REQUEST['r'] == "true") {
-	    echo('setMensaje("successDiv", "El item se ha dado de alta exitosamente.");');
-	}
-	if ($_REQUEST['r'] == "false") {
-	    echo('setMensaje("errorDiv", "Hubo un error al intentar dar de alta el item.");');
-	}
-?>
-</script>
