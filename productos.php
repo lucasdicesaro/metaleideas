@@ -11,37 +11,31 @@
     <link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
     <script type="text/javascript">
     	// http://leandrovieira.com/projects/jquery/lightbox/
-	    $(function() {
-	        $('#gallery1 a').lightBox({
+	    function activateGallery(categoria_id) {
+	        $('#gallery'+categoria_id+' a').lightBox({
 	        	txtImage: 'Imagen',
 	        	txtOf: 'de'
 			});
-	    });    	
-//	    function activateGallery(categoria_id) {
-//	        $('#gallery1 a').lightBox({
-//	        	txtImage: 'Imagen',
-//	        	txtOf: 'de'
-//			});
-//	    }
+	    }
     </script>
 	<style type="text/css">
-		#gallery {
+		.gallery {
 			background-color: #444;
 			padding: 10px;
 			width: 520px;
 		}
-		#gallery ul { list-style: none; }
-		#gallery ul li { display: inline; }
-		#gallery ul img {
+		.gallery ul { list-style: none; }
+		.gallery ul li { display: inline; }
+		.gallery ul img {
 			border: 5px solid #3e3e3e;
 			border-width: 5px 5px 20px;
 		}
-		#gallery ul a:hover img {
+		.gallery ul a:hover img {
 			border: 5px solid #fff;
 			border-width: 5px 5px 20px;
 			color: #fff;
 		}
-		#gallery ul a:hover { color: #fff; }
+		.gallery ul a:hover { color: #fff; }
 	</style>
 	</head>
     <body >
@@ -77,37 +71,27 @@
 																$result = mysql_query("SELECT * FROM `categorias` ORDER BY `orden` ASC") or die(mysql_error());
 																while ($row = mysql_fetch_array ($result))
 																{
-																	echo '<h2 id="categoria" class="list4" ><strong>' . utf8_encode($row['nombre']) . '</strong></h2>';
-																	echo '<p>Cliquee en las im&aacute;genes para ver sus detalles.</p>';
-																	echo '<div id="gallery'.$row['categoria_id'].'" style="width:726px" >';
-																	echo '<ul>';
+																	echo '<h2 id="categoria" class="list4" ><strong>' . utf8_encode($row['nombre']) . '</strong></h2>'."\n";
+																	echo '<p>Cliquee en las im&aacute;genes para ver sus detalles.</p>'."\n";
+																	echo '<div id="gallery'.$row['categoria_id'].'" class="gallery" style="width:726px" >'."\n";
+																	echo '<ul>'."\n";
 																	$categoria_id = $row['categoria_id'];
 																	$query = 'SELECT * FROM `productos` WHERE `categoria_id` = ' . $categoria_id . ' ORDER BY `orden` ASC';
 																	$resultproductos = mysql_query($query) or die(mysql_error());
 																	while ($rowproductos = mysql_fetch_array ($resultproductos))
 																	{
-																		echo '<li>';
-																		echo '<a href="images/800x600/' . $rowproductos['nombre_foto'] . '" title="' . $rowproductos['titulo'] . '">';
-																		echo '<img src="images/thumbs/' . $rowproductos['nombre_foto'] . '" width="72" height="72" alt="' . $rowproductos['titulo'] . '" />';
-																		echo '</a>';
-																		echo '</li>';
+																		echo '<li>'."\n";
+																		echo '<a href="images/800x600/' . $rowproductos['nombre_foto'] . '" title="' . $rowproductos['titulo'] . '">'."\n";
+																		echo '<img src="images/thumbs/' . $rowproductos['nombre_foto'] . '" width="72" height="72" alt="' . $rowproductos['titulo'] . '" />'."\n";
+																		echo '</a>'."\n";
+																		echo '</li>'."\n";
 																	}
-																	echo '</ul>';
-																	echo '</div>';
+																	echo '</ul>'."\n";
+																	echo '</div>'."\n";
 
-//																    echo '<script type="text/javascript">';
-//																    echo 'activateGallery('.$categoria_id.');';
-//																    echo '</script>	';
-																    
-//																    echo '<script type="text/javascript">';
-//																    	// http://leandrovieira.com/projects/jquery/lightbox/
-//																	echo '$(function() {';
-//																	echo '$("#gallery'.$categoria_id.' a").lightBox({';
-//																	echo 'txtImage: "Imagen",';
-//																	echo 'txtOf: "de"';
-//																	echo '});';
-//																	echo '});';
-//																    echo '</script>	';																
+																    echo '<script type="text/javascript">';
+																    echo 'activateGallery('.$categoria_id.');';
+																    echo '</script>	';
 																}
 															?>
 														</div>
