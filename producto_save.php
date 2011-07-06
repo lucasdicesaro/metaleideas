@@ -18,7 +18,7 @@
 		mysql_query("INSERT INTO productos (nombre_foto, titulo, orden, categoria_id) VALUES ('$nombre_foto','$tit', '$next','$categoria_id');");
 	}
 ?>
-<meta http-equiv="REFRESH" content="0;url=producto_consulta.php?r=<?echo($resultado)?>">
+<meta http-equiv="REFRESH" content="0;url=categoria_consulta.php?r=<?echo($resultado)?>">
 </head>
 <body>
 </body>

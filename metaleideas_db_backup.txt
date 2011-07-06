@@ -18,11 +18,10 @@ CREATE TABLE `productos` (
   `nombre_foto` varchar(150) NOT NULL default '',
   `titulo` varchar(150) NOT NULL default '',
   `orden` INT NOT NULL,
-  `categoria_id` INT NOT NULL
+  `categoria_id` INT NOT NULL,
+  PRIMARY KEY ( `producto_id` ),
+  FOREIGN KEY ( `categoria_id` ) REFERENCES `categorias` (`categoria_id`)
 );
-ALTER TABLE `productos` DROP PRIMARY KEY, ADD PRIMARY KEY ( `producto_id` ) ;
-ALTER TABLE `productos` ADD FOREIGN KEY ( `categoria_id` ) REFERENCES `metaleideasdb`.`categorias` (`categoria_id`);
-
 
 INSERT INTO `categorias`(`nombre`,`orden`)VALUES('Bobinadora de papel', 1);
 INSERT INTO `productos`(`nombre_foto`,`titulo`,`orden`,`categoria_id`)VALUES('bobinadora-papel-1.jpg','Bobinadora de papel',1,1);
