@@ -42,7 +42,7 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
 					type: "post",
 					data: "producto_id="+producto_id,
 					success: function(data) {
-						refreshItems();
+						refreshItems(producto_id);
 					},
 					error: function() {
 						alert("theres an error with AJAX");
@@ -51,10 +51,11 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
 			}
 		}
 
-		function refreshItems() {
+		function refreshItems(producto_id) {
 			$.ajax({
 				url: "producto_select_encoded.php",
 				type: "post",
+				data: "categoria_id="+ $("#categoriaId").val(),
 				success: function(data) {
 					$('#sortable').html(data);				
 				},
@@ -106,8 +107,15 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
                                                 </tr>
                                                 <tr>
                                                     <td style="height:50px" >
+                                                    	<?php
+                                                    		if(isset($_REQUEST['categoria_id'])) {
+                                                    			echo '<input id="categoriaId" name="categoriaId" type="hidden" value="'.$_REQUEST['categoria_id'].'"/>';
+															}
+															else {
+																echo '<input id="categoriaId" name="categoriaId" type="hidden" />';
+															}
+														?>
                                                     	<a href="productos.php" class="link2">Salir</a>
-                                                    	<a href="producto_alta.php" class="link2">Subir&nbsp;Foto</a>
                                                     	<a href="categoria_consulta.php" class="link2">Ver categor&iacute;as</a>
                                                     </td>
                                                 </tr>																		
