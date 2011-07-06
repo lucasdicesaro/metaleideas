@@ -81,8 +81,8 @@
 																	while ($rowproductos = mysql_fetch_array ($resultproductos))
 																	{
 																		echo '<li>'."\n";
-																		echo '<a href="images/800x600/' . $rowproductos['nombre_foto'] . '" title="' . $rowproductos['titulo'] . '">'."\n";
-																		echo '<img src="images/thumbs/' . $rowproductos['nombre_foto'] . '" width="72" height="72" alt="' . $rowproductos['titulo'] . '" />'."\n";
+																		echo '<a href="images/800x600/' . utf8_encode($rowproductos['nombre_foto']) . '" title="' . utf8_encode($rowproductos['titulo']) . '">'."\n";
+																		echo '<img src="images/thumbs/' . utf8_encode($rowproductos['nombre_foto']) . '" width="72" height="72" alt="' . utf8_encode($rowproductos['titulo']) . '" />'."\n";
 																		echo '</a>'."\n";
 																		echo '</li>'."\n";
 																	}
