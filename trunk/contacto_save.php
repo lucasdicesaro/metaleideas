@@ -18,9 +18,16 @@
 		$mensaje=mysql_real_escape_string(utf8_decode($_REQUEST['mensaje']));
 		
 		$query = "INSERT INTO `contactos`(`nombre`, `telefono`, `mail`, `mensaje`) VALUES('".$nom."', '".$tel."', '".$mail."', '".$mensaje."')";
-//		echo $query;
+//		echo $query;		
 		mysql_query($query);
         $resultado='true';
+        
+		$to = 'metaleideas@gmail.com';
+		$subject = 'Nuevo mensaje';
+		$message = 'Nombre: ' . $nom . "\n" . 'Telefono: ' . $tel . "\n" . 'Mail: ' . $mail . "\n" . 'Mensaje: ' . $mensaje;
+		$from = 'Metal e Ideas';
+		$headers = 'From:' . $from;
+		mail($to, $subject, $message, $headers);
 	}
 ?>
 <meta http-equiv="REFRESH" content="0;url=contacto.php?r=<?echo($resultado)?>">
