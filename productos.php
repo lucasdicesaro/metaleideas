@@ -9,15 +9,20 @@
     <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.lightbox-0.5.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
-
     <script type="text/javascript">
     	// http://leandrovieira.com/projects/jquery/lightbox/
 	    $(function() {
-	        $('#gallery a').lightBox({
+	        $('#gallery1 a').lightBox({
 	        	txtImage: 'Imagen',
 	        	txtOf: 'de'
 			});
-	    });
+	    });    	
+//	    function activateGallery(categoria_id) {
+//	        $('#gallery1 a').lightBox({
+//	        	txtImage: 'Imagen',
+//	        	txtOf: 'de'
+//			});
+//	    }
     </script>
 	<style type="text/css">
 		#gallery {
@@ -68,23 +73,43 @@
 												<tr>
 													<td>
 														<div>
-															<h2 id="productos" class="list4" ><strong>Nuestros productos</strong></h2>
-															<p>Cliquee en las im&aacute;genes para ver sus detalles.</p>
-															<div id="gallery" style="width:726px" >
-																<ul>
-																	<?php
-																	   $result = mysql_query("SELECT * FROM productos;") or die(mysql_error());
-																	   while ($row = mysql_fetch_array ($result))
-																	   {
-																	      print ("<li>");
-																	      print ("<a href=\"images/800x600/$row[nombre_foto]\" title=\"$row[titulo]\">\n");
-																	      print ("<img src=\"images/thumbs/$row[nombre_foto]\" width=\"72\" height=\"72\" alt=\"$row[titulo]\" />\n");
-																	      print ("</a>");
-																	      print ("</li>");
-																	    }
-																	?>
-															    </ul>
-															</div>
+															<?php
+																$result = mysql_query("SELECT * FROM `categorias` ORDER BY `orden` ASC") or die(mysql_error());
+																while ($row = mysql_fetch_array ($result))
+																{
+																	echo '<h2 id="categoria" class="list4" ><strong>' . utf8_encode($row['nombre']) . '</strong></h2>';
+																	echo '<p>Cliquee en las im&aacute;genes para ver sus detalles.</p>';
+																	echo '<div id="gallery'.$row['categoria_id'].'" style="width:726px" >';
+																	echo '<ul>';
+																	$categoria_id = $row['categoria_id'];
+																	$query = 'SELECT * FROM `productos` WHERE `categoria_id` = ' . $categoria_id . ' ORDER BY `orden` ASC';
+																	$resultproductos = mysql_query($query) or die(mysql_error());
+																	while ($rowproductos = mysql_fetch_array ($resultproductos))
+																	{
+																		echo '<li>';
+																		echo '<a href="images/800x600/' . $rowproductos['nombre_foto'] . '" title="' . $rowproductos['titulo'] . '">';
+																		echo '<img src="images/thumbs/' . $rowproductos['nombre_foto'] . '" width="72" height="72" alt="' . $rowproductos['titulo'] . '" />';
+																		echo '</a>';
+																		echo '</li>';
+																	}
+																	echo '</ul>';
+																	echo '</div>';
+
+//																    echo '<script type="text/javascript">';
+//																    echo 'activateGallery('.$categoria_id.');';
+//																    echo '</script>	';
+																    
+//																    echo '<script type="text/javascript">';
+//																    	// http://leandrovieira.com/projects/jquery/lightbox/
+//																	echo '$(function() {';
+//																	echo '$("#gallery'.$categoria_id.' a").lightBox({';
+//																	echo 'txtImage: "Imagen",';
+//																	echo 'txtOf: "de"';
+//																	echo '});';
+//																	echo '});';
+//																    echo '</script>	';																
+																}
+															?>
 														</div>
 													</td>
 												</tr>
