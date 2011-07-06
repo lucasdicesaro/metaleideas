@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
     <head>
-        <title>Contacto, Metal E Ideas, Mail</title>
+        <title>Administrador</title>
         <meta http-equiv="Content-Style-Type" content="text/css">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link href="css/style.css" type="text/css" rel="stylesheet">
@@ -11,41 +11,37 @@
 	    <script type="text/javascript" src="uploadify/swfobject.js"></script>
 	    <script type="text/javascript" src="uploadify/jquery.uploadify.v2.1.4.min.js"></script>
 	    <script type="text/javascript">
-	    $(document).ready(function() {
-	      $('#file_thumbs_upload').uploadify({
-	        'uploader'  : 'uploadify/uploadify.swf',
-	        'script'    : 'uploadify/uploadify.php',
-	        'cancelImg' : 'uploadify/cancel.png',
-	        'folder'    : 'images/thumbs',
-	        'auto'      : true,
-	        'fileExt'   : '*.jpg;*.gif;*.png',
-	        'fileDesc'  : 'Web Image Files (.JPG, .GIF, .PNG)',
-			'sizeLimit' : 10240,
-			'onComplete': function(event, queueID, fileObj, response, data) {
-	        	$("#nombreFoto").val(fileObj['name']);
-			}
-	      });
-	    });
-	    $(document).ready(function() {
-	      $('#file_upload').uploadify({
-	        'uploader'  : 'uploadify/uploadify.swf',
-	        'script'    : 'uploadify/uploadify.php',
-	        'cancelImg' : 'uploadify/cancel.png',
-	        'folder'    : 'images/800x600',
-	        'auto'      : true,
-	        'fileExt'   : '*.jpg;*.gif;*.png',
-	        'fileDesc'  : 'Web Image Files (.JPG, .GIF, .PNG)',
-			'sizeLimit' : 102400,
-			'onComplete': function(event, queueID, fileObj, response, data) {
-	        	$("#nombreFoto").val(fileObj['name']);
-			}
-		  });
-	    });
-	    </script>
-        
-        
-        
-        <script  language="javascript">
+		    $(document).ready(function() {
+		      $('#file_thumbs_upload').uploadify({
+		        'uploader'  : 'uploadify/uploadify.swf',
+		        'script'    : 'uploadify/uploadify.php',
+		        'cancelImg' : 'uploadify/cancel.png',
+		        'folder'    : 'images/thumbs',
+		        'auto'      : true,
+		        'fileExt'   : '*.jpg;*.gif;*.png',
+		        'fileDesc'  : 'Web Image Files (.JPG, .GIF, .PNG)',
+				'sizeLimit' : 10240,
+				'onComplete': function(event, queueID, fileObj, response, data) {
+		        	$("#nombreFoto").val(fileObj['name']);
+				}
+		      });
+		    });
+		    $(document).ready(function() {
+		      $('#file_upload').uploadify({
+		        'uploader'  : 'uploadify/uploadify.swf',
+		        'script'    : 'uploadify/uploadify.php',
+		        'cancelImg' : 'uploadify/cancel.png',
+		        'folder'    : 'images/800x600',
+		        'auto'      : true,
+		        'fileExt'   : '*.jpg;*.gif;*.png',
+		        'fileDesc'  : 'Web Image Files (.JPG, .GIF, .PNG)',
+				'sizeLimit' : 102400,
+				'onComplete': function(event, queueID, fileObj, response, data) {
+		        	$("#nombreFoto").val(fileObj['name']);
+				}
+			  });
+		    });
+
             function trim(value) {
                 return value.replace(/^\s+|\s+$/,'');
             }

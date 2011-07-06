@@ -1,14 +1,14 @@
 <?php
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 include 'config.php';
 error_reporting(E_ALL & ~E_DEPRECATED);
-$link = mysql_connect ($host, $user, $password) or die ("<center>No se puede conectar con la base de datos\n</center>\n");
+// Connecting to Database
+mysql_connect ($host, $user, $password) or die ('Cant Connect to MySQL');
+// Selecting Database
+mysql_select_db($dbname) or die ('Cant select Database');
 ?>
 <html>
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
@@ -30,34 +30,29 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
                                                 <tr>
                                                     <td ><table>
                                                             <tr>
-                                                                <td><img src="images/title6_3.gif" alt="" style="margin:6px 0 0 16px"><br>
-                                                                <div style="overflow-y: scroll;height:350px" > 
-																	<table border="1" id="grilla" >
-																		<tr align="center">
-																			<td width="15%"><strong>Nombre</strong></td>
-																			<td width="15%"><strong>Telefono</strong></td>
-																			<td width="30%"><strong>Mail</strong></td>
-																			<td width="40%"><strong>Mensaje</strong></td>
-																		</tr>
-																		<?php
-																		   $tablename="contactos";
-																		   $query="SELECT * FROM $tablename;";
-																		   $result=mysql_db_query ($dbname, $query, $link);
-																		   while ($row = mysql_fetch_array ($result))
-																		   {
-																		      print ("<TR>");
-																		      print ("<TD>$row[nombre]</TD>\n");
-																		      print ("<TD>$row[telefono]</TD>\n");
-																		      print ("<TD>$row[mail]</TD>\n");
-																		      print ("<TD>$row[mensaje]</TD>\n");
-																		      print ("</TR>");
-																		    }
-																		    mysql_free_result($result);
-																		?>
-																	</table>																	
-																	<?php
-																	mysql_close($link);
-																	?>
+                                                                <td>
+                                                                	<img src="images/title6_3.gif" alt="" style="margin:6px 0 0 16px"><br>
+                                                                	<div style="overflow-y: scroll;height:350px" > 
+																		<table border="1" id="grilla" >
+																			<tr align="center">
+																				<td width="15%"><strong>Nombre</strong></td>
+																				<td width="15%"><strong>Telefono</strong></td>
+																				<td width="30%"><strong>Mail</strong></td>
+																				<td width="40%"><strong>Mensaje</strong></td>
+																			</tr>
+																			<?php
+																			   $result = mysql_query ("SELECT * FROM `contactos` ORDER BY `fecha_hora` DESC");
+																			   while ($row = mysql_fetch_array ($result))
+																			   {
+																			      echo '<TR>';
+																			      echo '<TD>' . utf8_encode($row['nombre']) . '</TD>';
+																			      echo '<TD>' . $row['telefono'] . '</TD>';
+																			      echo '<TD>' . $row['mail'] . '</TD>';
+																			      echo '<TD>' . utf8_encode($row['mensaje']) . '</TD>';
+																			      echo '</TR>';
+																			    }
+																			?>
+																		</table>																	
 																	</div>
                                                                 </td>
                                                             </tr>

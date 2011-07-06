@@ -9,6 +9,9 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
 ?>
 <html>
 <head>
+    <title>Administrador</title>
+    <meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link href="css/style.css" type="text/css" rel="stylesheet">
 
     <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
@@ -53,7 +56,7 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
 
 		function refreshItems(producto_id) {
 			$.ajax({
-				url: "producto_select_encoded.php",
+				url: "producto_select.php",
 				type: "post",
 				data: "categoria_id="+ $("#categoriaId").val(),
 				success: function(data) {
