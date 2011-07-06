@@ -100,3 +100,37 @@ strong { color:#C9C9B5}
 }
 
 #grilla tr td { padding:4 8 4 8}
+
+.fl_left{float:left;}
+.fl_right{float:right;
+        width: 495px;}
+
+/* Draggable elements */
+/*
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+#sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+#sortable li span { position: relative; margin-left: -1.3em; }
+*/
+#sortable { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+	width: 200px;
+	text-align:center; 
+}
+#sortable li { 
+	margin: 0 0 3px;
+	text-align: left !important;
+	padding: 5px 5px 5px 21px; 
+	font-size: 12px !important;
+	font-family: Helvetica,Arial sans-serif !important;
+	color: #ffffff !important; 
+	border: 1px solid #D3D3D3;
+	height: 18px;
+	width: 190px; 
+	list-style: none outside none;
+}
+#sortable li span.list-icon {
+        margin-left: -18px;
+        position: relative;
+}
