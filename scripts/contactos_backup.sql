@@ -1,29 +1,4 @@
-﻿-- phpMyAdmin SQL Dump
--- version 3.3.9.2
--- http://www.phpmyadmin.net
---
--- Host: localhost
--- Generation Time: Jul 06, 2011 at 02:01 PM
--- Server version: 5.0.92
--- PHP Version: 5.2.9
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
---
--- Database: `metaleid_db`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `contactos`
---
 DROP TABLE `contactos`; 
 
 CREATE TABLE `contactos` (
@@ -36,10 +11,6 @@ CREATE TABLE `contactos` (
 	PRIMARY KEY ( `contactos_id` )	
 ) ENGINE = InnoDB, CHARACTER SET utf8 COLLATE utf8_spanish_ci;
 
-
---
--- Dumping data for table `contactos`
---
 
 INSERT INTO `contactos` (`nombre`, `telefono`, `mail`, `mensaje`, `fecha_hora`) VALUES
 ('Julio Cesar Castillo', '005114641786', 'julio.castillo@ica.com.pe', 'Buenas tardes,\r\nPor favor cotizarme las diferentes maquinas medidoras decable, que midan cables de hasta 13 mm.\r\n\r\nGracias.\r\nSaludos.', '2010-05-20 18:02:24'),
