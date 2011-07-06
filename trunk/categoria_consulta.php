@@ -1,5 +1,8 @@
 <html>
 <head>
+    <title>Administrador</title>
+    <meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link href="css/style.css" type="text/css" rel="stylesheet">
 
     <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
@@ -44,7 +47,7 @@
 
 		function refreshItems() {
 			$.ajax({
-				url: "categoria_select_encoded.php",
+				url: "categoria_select.php",
 				type: "post",
 				success: function(data) {
 					$('#sortable').html(data);				
