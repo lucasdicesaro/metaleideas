@@ -60,13 +60,10 @@
                                         <td >
                                         	<table style="width:726px" >
 <?php
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-include 'config.php';
-error_reporting(E_ALL & ~E_DEPRECATED);
-$link = mysql_connect ($host, $user, $password) or die ("<center>No se puede conectar con la base de datos\n</center>\n");
+	include 'config.php';
+	error_reporting(E_ALL & ~E_DEPRECATED);
+	mysql_connect ($host, $user, $password) or die ("<center>No se puede conectar con la base de datos\n</center>\n");
+	mysql_select_db($dbname) or die ('Cant select Database');
 ?>
 												<tr>
 													<td>
@@ -76,8 +73,7 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
 															<div id="gallery" style="width:726px" >
 																<ul>
 																	<?php
-																	   $query="SELECT * FROM productos;";
-																	   $result=mysql_db_query ($dbname, $query, $link);
+																	   $result = mysql_query("SELECT * FROM productos;") or die(mysql_error());
 																	   while ($row = mysql_fetch_array ($result))
 																	   {
 																	      print ("<li>");
@@ -86,16 +82,12 @@ $link = mysql_connect ($host, $user, $password) or die ("<center>No se puede con
 																	      print ("</a>");
 																	      print ("</li>");
 																	    }
-																	    mysql_free_result($result);
 																	?>
 															    </ul>
 															</div>
 														</div>
 													</td>
 												</tr>
-<?php
-mysql_close($link);
-?>
                                                 <tr>
                                                     <td align="center" valign="middle">
                                                         <div nowrap="nowrap" class="list4" style="font-size:16px;height:35px;margin-top:20px;"><b><a target="_blank" href="http://www.metaleideas.blogspot.com/">¡¡¡ Vea nuestros &uacute;ltimos productos !!!</a></b></div>
