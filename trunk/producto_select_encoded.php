@@ -13,6 +13,6 @@
 	
 	$result = mysql_query($query) or die(mysql_error());
 	while($row = mysql_fetch_array($result)) {
-		echo utf8_encode('<li class="ui-state-default ui-corner-top ui-corner-bottom" id="producto_' . $row['producto_id'] . '"><span class="ui-icon ui-icon-arrowthick-2-n-s fl_left list-icon"></span>' . $row['titulo'] . '<span onclick="borrar(' . $row['producto_id'] . ')" class="cursor-pointer ui-icon ui-icon-close fl_right"></span><span class="cursor-pointer ui-icon ui-icon-search fl_right"></span></li>');																			
+		echo utf8_encode('<li class="ui-state-default ui-corner-top ui-corner-bottom" id="producto_' . $row['producto_id'] . '"><span class="ui-icon ui-icon-arrowthick-2-n-s fl_left list-icon"></span>' . $row['titulo'] . '<span onclick="borrar(' . $row['producto_id'] . ')" class="cursor-pointer ui-icon ui-icon-close fl_right"></span></li>');																			
 	}
 ?>
