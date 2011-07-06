@@ -8,6 +8,7 @@ mysql_select_db($dbname) or die ('Cant select Database');
 ?>
 <html>
 <head>
+    <title>Administrador</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
