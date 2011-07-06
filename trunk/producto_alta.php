@@ -100,7 +100,7 @@
                                                     <td style="height:20px"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="height:20px" class="list4"><h2>Metal e Ideas</h2> <strong>Alta Productos</strong></td>
+                                                    <td style="height:20px" class="list4"><h2>Metal e Ideas</h2> <strong>Alta de Producto</strong></td>
                                                 </tr>
                                                 <tr>
                                                     <td ><table>
