@@ -40,6 +40,9 @@ ul li a:hover{color:#C9C9B5}
 .link2 {background:url(../images/marker.gif) no-repeat 6px 6px #262421; padding-right:5px; padding-left:16px; width:62px; height:16px; color:#AFC61D; text-decoration:none; margin-left:1px; font-weight:100}
 .link2 a:hover{color:#C9C9B5}
 
+.link3 {padding-right:5px; width:62px; height:16px; color:#AFC61D; text-decoration:none; margin-left:1px; font-weight:100}
+.link3 a:hover{color:#C9C9B5}
+
 
 span {color:#AFC61D}
 span a{text-decoration:none; color:#AFC61D}
