@@ -147,7 +147,7 @@
                                                                         <a class="link3" target="_blank" href="http://maps.google.es/maps?saddr=Au.+Luis+Dellepiane&daddr=Cnel.+Isle%C3%B1o+1661,+Gregorio+de+Laferrere,+Buenos+Aires,+Argentina&hl=es&ie=UTF8&ll=-34.710574,-58.521767&spn=0.102448,0.154324&sll=-34.71784,-58.53128&sspn=0.102439,0.154324&geocode=FZi47v0dlZWD_A%3BFZn77f0duS6C_CkxKc5ilcW8lTGrIxhqHkND8A&mra=mrv&z=13" >Click aqu&iacute; para saber c&oacute;mo llegar<br>desde Av. Gral Paz y Au. Ricchieri</a><br>
                                                                         <img src="images/title6_2.gif" alt="" style="margin-left:7px"><br>
                                                                         <br style="line-height:13px">
-                                                                        <strong>Envios.</strong> Capital Federal y Gran Bs As, <span>sin costo</span>. Otras localidades: Llevaremos su compra al transporte que usted indique. La mercadería viaja por cuenta y orden del comprador.<br>
+                                                                        <strong>Envios.</strong> Capital Federal y Gran Bs As, <span>a convenir</span>. Otras localidades: Llevaremos su compra al transporte que usted indique. La mercadería viaja por cuenta y orden del comprador.<br>
                                                                         <br style="line-height:15px">
                                                                         <table style="height:53px;  width:442px" >
                                                                             <tr>
