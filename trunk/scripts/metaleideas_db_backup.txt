@@ -1,5 +1,8 @@
 
+
+DROP TABLE `productos`;
 DROP TABLE `categorias`;
+
 CREATE TABLE `categorias` (
 	`categoria_id` INT NOT NULL AUTO_INCREMENT ,
 	`nombre` VARCHAR( 100 ) NOT NULL ,
@@ -7,7 +10,6 @@ CREATE TABLE `categorias` (
 	PRIMARY KEY ( `categoria_id` )
 ) ENGINE = InnoDB, CHARACTER SET utf8 COLLATE utf8_spanish_ci;
 
-DROP TABLE `productos`;
 CREATE TABLE `productos` (
 	`producto_id` INT NOT NULL AUTO_INCREMENT , 
 	`nombre_foto` varchar(150) NOT NULL default '',
@@ -17,6 +19,9 @@ CREATE TABLE `productos` (
 	PRIMARY KEY ( `producto_id` ),
 	FOREIGN KEY ( `categoria_id` ) REFERENCES `categorias` (`categoria_id`)
 ) ENGINE = InnoDB, CHARACTER SET utf8 COLLATE utf8_spanish_ci;
+
+
+
 
 /*
 INSERT INTO `categorias`(`nombre`,`orden`)VALUES('Bobinadora de papel', 1);
