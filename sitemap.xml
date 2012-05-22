@@ -5,7 +5,7 @@
 	http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<url>
 		<loc>http://www.metaleideas.com.ar/index.php</loc>
-		<lastmod>2009-05-14</lastmod>
+		<lastmod>2012-04-17</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -19,7 +19,7 @@
 	</url>
 	<url>
 		<loc>http://www.metaleideas.com.ar/productos.php</loc>
-		<changefreq>weekly</changefreq>
+		<changefreq>daily</changefreq>
 	</url>
 	<url>
 		<loc>http://www.metaleideas.com.ar/clientes.php</loc>
