@@ -35,7 +35,7 @@
 		        'auto'      : true,
 		        'fileExt'   : '*.jpg;*.gif;*.png',
 		        'fileDesc'  : 'Web Image Files (.JPG, .GIF, .PNG)',
-				'sizeLimit' : 102400,
+				'sizeLimit' : 204800,
 				'onComplete': function(event, queueID, fileObj, response, data) {
 		        	$("#nombreFoto").val(fileObj['name']);
 				}
