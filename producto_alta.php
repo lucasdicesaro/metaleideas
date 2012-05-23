@@ -20,7 +20,7 @@
 		        'auto'      : true,
 		        'fileExt'   : '*.jpg;*.gif;*.png',
 		        'fileDesc'  : 'Web Image Files (.JPG, .GIF, .PNG)',
-				'sizeLimit' : 10240,
+				'sizeLimit' : 40960,
 				'onComplete': function(event, queueID, fileObj, response, data) {
 		        	$("#nombreFoto").val(fileObj['name']);
 				}
@@ -35,7 +35,7 @@
 		        'auto'      : true,
 		        'fileExt'   : '*.jpg;*.gif;*.png',
 		        'fileDesc'  : 'Web Image Files (.JPG, .GIF, .PNG)',
-				'sizeLimit' : 204800,
+				'sizeLimit' : 409600,
 				'onComplete': function(event, queueID, fileObj, response, data) {
 		        	$("#nombreFoto").val(fileObj['name']);
 				}
