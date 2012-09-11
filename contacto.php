@@ -142,7 +142,7 @@
                                                                         <br style="line-height:3px">
                                                                         Móvil:<img src="images/spacer.gif" alt="" width="54" height="1">+54 911 6184 5833<br>
                                                                         <br style="line-height:3px">
-                                                                        Radio:<img src="images/spacer.gif" alt="" width="101" height="1">575*1690<br>
+                                                                        &nbsp;<img src="images/spacer.gif" alt="" width="101" height="1">&nbsp;<br>
                                                                         <br style="line-height:3px">
                                                                         <a class="link3" target="_blank" href="http://maps.google.es/maps?saddr=Au.+Luis+Dellepiane&daddr=Cnel.+Isle%C3%B1o+1661,+Gregorio+de+Laferrere,+Buenos+Aires,+Argentina&hl=es&ie=UTF8&ll=-34.710574,-58.521767&spn=0.102448,0.154324&sll=-34.71784,-58.53128&sspn=0.102439,0.154324&geocode=FZi47v0dlZWD_A%3BFZn77f0duS6C_CkxKc5ilcW8lTGrIxhqHkND8A&mra=mrv&z=13" >Click aqu&iacute; para saber c&oacute;mo llegar<br>desde Av. Gral Paz y Au. Ricchieri</a><br>
                                                                         <img src="images/title6_2.gif" alt="" style="margin-left:7px"><br>
