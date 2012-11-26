@@ -36,7 +36,11 @@
                                                                     <div style="margin-left:11px; width:307px" class="list">
                                                                         <img src="images/soldando-suavizado.jpg" height="90" width="90" alt="Gervasio Ezequiel Nuñez" style="margin-right:18px; margin-top:4px; margin-bottom:4px; float:left;">
                                                                         <strong>Ezequiel Nuñez.<br>Jefe de Operaciones y Planta</strong><br>
-                                                                        <p style="text-align: justify">Posee una amplia experiencia técnica en el manejo de materiales <span>metálicos</span> y en diferentes &aacute;reas de la industria metal&uacute;rgica. Su aporte de creatividad hace que sus trabajos se diferencien en el mercado.</p><br>
+                                                                        <p style="text-align: justify">
+                                                                        	<?php 
+                                                                        		echo gettext("Posee una amplia experiencia técnica en el manejo de materiales metálicos y en diferentes áreas de la industria metalúrgica. Su aporte de creatividad hace que sus trabajos se diferencien en el mercado.")
+                                                                        	?>
+                                                                        </p><br>
                                                                 </div></td>
                                                                 <td class="bg3"><img src="images/bg1_3.gif" alt="" align="top"></td>
                                                                 <td style="width:241px"><img src="images/title4_3.gif" alt="" style="margin:7px 0 0 16px"><br>

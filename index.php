@@ -1,10 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
     <head>
-    <title>Metal e Ideas, Medidores, Cables, Metalurgica, Metal, Ideas, Industria, Cable, Medidor, Metales, Medida</title>
-    <meta http-equiv="Content-Style-Type" content="text/css">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link href="css/style.css" type="text/css" rel="stylesheet">
+	    <title>Metal e Ideas, Medidores, Cables, Metalurgica, Metal, Ideas, Industria, Cable, Medidor, Metales, Medida</title>
+	    <meta http-equiv="Content-Style-Type" content="text/css">
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	    <link href="css/style.css" type="text/css" rel="stylesheet">
+    </head>
     <body>
         <table style="height:100%">
             <tr>

@@ -99,7 +99,7 @@
 												</tr>
                                                 <tr>
                                                     <td align="center" valign="middle">
-                                                        <div nowrap="nowrap" class="list4" style="font-size:16px;height:35px;margin-top:20px;"><b><a target="_blank" href="http://www.metaleideas.blogspot.com/">¡¡¡ Vea nuestros &uacute;ltimos productos !!!</a></b></div>
+                                                        <div class="list4" style="nowrap:nowrap; font-size:16px;height:35px;margin-top:20px;"><b><a target="_blank" href="http://www.metaleideas.blogspot.com/">¡¡¡ Vea nuestros &uacute;ltimos productos !!!</a></b></div>
                                                     </td>
                                                 </tr>
                                                 <tr>

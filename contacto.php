@@ -198,8 +198,8 @@
                                                                             </tr>
                                                                             <tr>
                                                                                 <td width="50" height="30" >
-                                                                                    <div id="successDiv" class="mensajeSucc" width="50"></div>
-                                                                                    <div id="errorDiv" class="mensajeErr" width="50"></div>
+                                                                                    <div id="successDiv" class="mensajeSucc" style="width:50"></div>
+                                                                                    <div id="errorDiv" class="mensajeErr" style="width:50"></div>
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
@@ -256,14 +256,14 @@
             } catch(err) {}
         </script>
     </body>
+	<script>
+		<?
+			if ($_REQUEST['r'] == "true") {
+			    echo('setMensaje("successDiv", "Hemos recibido su mensaje. En breve lo estaremos contactando.");');
+			}
+			if ($_REQUEST['r'] == "false") {
+			    echo('setMensaje("errorDiv", "No pudimos recibir su mensaje.Por favor intente mas tarde.");');
+			}
+		?>
+	</script>
 </html>
-<script>
-<?
-if ($_REQUEST['r'] == "true") {
-    echo('setMensaje("successDiv", "Hemos recibido su mensaje. En breve lo estaremos contactando.");');
-}
-if ($_REQUEST['r'] == "false") {
-    echo('setMensaje("errorDiv", "No pudimos recibir su mensaje.Por favor intente mas tarde.");');
-}
-?>
-</script>
