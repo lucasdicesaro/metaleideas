@@ -86,14 +86,14 @@ mysql_select_db($dbname) or die ('Cant select Database');
             </tr>
         </table>
 	</body>
+	<script type="text/javascript">
+		<?
+			if ($_REQUEST['r'] == "true") {
+			    echo('setMensaje("successDiv", "Hemos recibido su mensaje. En breve lo estaremos contactando.");');
+			}
+			if ($_REQUEST['r'] == "false") {
+			    echo('setMensaje("errorDiv", "No pudimos recibir su mensaje.Por favor intente mas tarde.");');
+			}
+		?>
+	</script>
 </html>
-<script type="text/javascript">
-<?
-if ($_REQUEST['r'] == "true") {
-    echo('setMensaje("successDiv", "Hemos recibido su mensaje. En breve lo estaremos contactando.");');
-}
-if ($_REQUEST['r'] == "false") {
-    echo('setMensaje("errorDiv", "No pudimos recibir su mensaje.Por favor intente mas tarde.");');
-}
-?>
-</script>
