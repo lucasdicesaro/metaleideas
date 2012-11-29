@@ -34,18 +34,39 @@
 
                                                                     <img src="images/title3_1.gif" alt="" style="margin:6px 0 0 8px"><br>
                                                                     <br style="line-height:16px">
-                                                                    <div style="margin-left:11px; width:455px" class="list"> <span>Equipo de desarrollo</span> <br>
-                                                                        El equipo de Metal e Ideas, posee mano de obra calificada y la tecnolog&iacute;a para ofrecer el mejor servicio, en el momento que se requiera.<br>
+                                                                    <div style="margin-left:11px; width:455px" class="list"> <span><?php if ($spanish) { echo "Equipo de desarrollo"; } else { echo "Development Team"; } ?></span><br>
+                                                                    		<?php
+	                                                                        	if ($spanish) {
+																					echo "El equipo de Metal e Ideas, posee mano de obra calificada y la tecnolog&iacute;a para ofrecer el mejor servicio, en el momento que se requiera.";
+	                                                                        	} else {
+	                                                                        		echo "Metal e Ideas team, has skilled labor and technology to provide the best service, at the time required.";
+	                                                                        	}
+                                                                        	?>
+                                                                        <br>
                                                                         <br style="line-height:15px">
-                                                                        <img src="images/torno.gif" width="100" height="100" align="left" style="margin:2px 23px 0 0" alt="Torno"><strong>El proceso</strong><br>
+                                                                        <img src="images/torno.gif" width="100" height="100" align="left" style="margin:2px 23px 0 0" alt="Torno"><strong><?php if ($spanish) { echo "El proceso"; } else { echo "Process"; } ?></strong><br>
                                                                         <br style="line-height:3px">
-                                                                        En el proceso de fabricaci&oacute;n de los productos, se utilizan maquinarias de primera calidad, para obtener un producto final de primer nivel.<br>
+                                                                    		<?php
+	                                                                        	if ($spanish) {
+																					echo "En el proceso de fabricaci&oacute;n de los productos, se utilizan maquinarias de primera calidad, para obtener un producto final de primer nivel.";
+	                                                                        	} else {
+	                                                                        		echo "In the manufacturing process of the products, first-quality machinery is used to obtain a first-level final product.";
+	                                                                        	}
+                                                                        	?>
+                                                                        <br>
                                                                         <br style="line-height:15px">
                                                                         <!--a href="#">read more</a--><br>
                                                                         <br style="line-height:39px">
-                                                                        <img src="images/migmacs.gif" width="100" height="100" align="left" style="margin:2px 23px 0 0" alt="migmacs"><strong>La tecnolog&iacute;a</strong><br>
+                                                                        <img src="images/migmacs.gif" width="100" height="100" align="left" style="margin:2px 23px 0 0" alt="migmacs"><strong><?php if ($spanish) { echo "La tecnolog&iacute;a"; } else { echo "Technology"; } ?></strong><br>
                                                                         <br style="line-height:3px">
-                                                                        La utilizaci&oacute;n de la &uacute;ltima tecnolog&iacute;a, permite obtener productos con un uso &oacute;ptimo de los recursos.<br>
+																			<?php
+	                                                                        	if ($spanish) {
+																					echo "La utilizaci&oacute;n de la &uacute;ltima tecnolog&iacute;a, permite obtener productos con un uso &oacute;ptimo de los recursos.";
+	                                                                        	} else {
+	                                                                        		echo "The use of the latest technology allows to obtain products with optimal use of resources.";
+	                                                                        	}
+                                                                        	?>
+                                                                        <br>
                                                                         <br style="line-height:15px">
                                                                         <!--a href="#">read more</a--><br>
                                                                 </div></td>
@@ -55,13 +76,13 @@
                                                                     <br>
                                                                     <br style="line-height:16px">
                                                                     <div id="dot" style="margin-left:20px; width:192px" class="list3"><br><br>
-                                                                        <strong>Aplicaciones sobre maquinarias:</strong><br>
+                                                                        <strong><?php if ($spanish) { echo "Aplicaciones sobre maquinarias"; } else { echo "Applications on machineries"; } ?>:</strong><br>
                                                                         <br style="line-height:4px">
                                                                         <ul>
-                                                                            <li><span>Dise&ntilde;o</span></li>
-                                                                            <li><span>Adaptaci&oacute;n</span></li>
-                                                                            <li><span>Reformas</span></li>
-                                                                            <li><span>Instalaci&oacute;n</span></li>
+                                                                            <li><span><?php if ($spanish) { echo "Dise&ntilde;o"; } else { echo "Design"; } ?></span></li>
+                                                                            <li><span><?php if ($spanish) { echo "Adaptaci&oacute;n"; } else { echo "Adaptation"; } ?></span></li>
+                                                                            <li><span><?php if ($spanish) { echo "Reformas"; } else { echo "Reforms"; } ?></span></li>
+                                                                            <li><span><?php if ($spanish) { echo "Instalaci&oacute;n"; } else { echo "Instalation"; } ?></span></li>
                                                                         </ul>
                                                                         <br style="line-height:13px">
                                                                     <span><!--a href="#">more services</a--></span> </div>

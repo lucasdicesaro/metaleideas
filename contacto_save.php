@@ -3,6 +3,18 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <?
+	// get language preference
+	if (isset($_GET["lang"])) {
+	    $language = substr($_GET["lang"], 0, 2);
+	}
+	else {
+		$language = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+	}
+	$spanish = $language == "es";
+	if (!$spanish) {
+		$language = "en";
+	}
+
     include 'config.php';
     $resultado='false';
     error_reporting(E_ALL & ~E_DEPRECATED);
@@ -32,7 +44,7 @@
 		mail($to, $subject, $message, $headers);
 	}
 ?>
-<meta http-equiv="REFRESH" content="0;url=contacto.php?r=<?echo($resultado)?>">
+<meta http-equiv="REFRESH" content="0;url=contacto.php?lang=<?echo($language)?>&r=<?echo($resultado)?>">
 </head>
 <body>
 </body>

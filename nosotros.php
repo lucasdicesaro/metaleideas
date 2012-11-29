@@ -35,10 +35,14 @@
                                                                     <br style="line-height:17px">
                                                                     <div style="margin-left:11px; width:307px" class="list">
                                                                         <img src="images/soldando-suavizado.jpg" height="90" width="90" alt="Gervasio Ezequiel Nuñez" style="margin-right:18px; margin-top:4px; margin-bottom:4px; float:left;">
-                                                                        <strong>Ezequiel Nuñez.<br>Jefe de Operaciones y Planta</strong><br>
+                                                                        <strong>Ezequiel Nuñez.<br><?php if ($spanish) { echo "Jefe de Operaciones y Planta"; } else { echo "Head of Operations and Plant"; } ?></strong><br>
                                                                         <p style="text-align: justify">
-                                                                        	<?php 
-                                                                        		echo gettext("Posee una amplia experiencia técnica en el manejo de materiales metálicos y en diferentes áreas de la industria metalúrgica. Su aporte de creatividad hace que sus trabajos se diferencien en el mercado.")
+                                                                        	<?php
+	                                                                        	if ($spanish) {
+																					echo "Posee una amplia experiencia técnica en el manejo de materiales <span>metálicos</span> y en diferentes &aacute;reas de la industria metal&uacute;rgica. Su aporte de creatividad hace que sus trabajos se diferencien en el mercado.";
+	                                                                        	} else {
+	                                                                        		echo "He has extensive expertise in managing both <span>metallic</span> materials, and in different areas of the metal industry. His contribution of creative work, makes the difference.";
+	                                                                        	}
                                                                         	?>
                                                                         </p><br>
                                                                 </div></td>
@@ -47,9 +51,18 @@
                                                                     <br style="line-height:17px">
                                                                     <div style="margin-left:20px; width:307px" class="list">
                                                                         <img src="images/juanmedina-suavizada.jpg" alt="Juan Balin Medina" height="138" width="90" style="margin-right:18px; margin-top:4px; margin-bottom:4px; float:left;">
-                                                                        <strong>Juan Balbin Medina.<br>Gerente de Ventas</strong><br>
+                                                                        <strong>Juan Balbin Medina.<br><?php if ($spanish) { echo "Gerente de Ventas"; } else { echo "Sales Manager"; } ?></strong><br>
                                                                         <br style="line-height:5px">
-                                                                        <p style="text-align: justify">Dedica ya más de 10 años en diferentes áreas de venta. Su experiencia a lo largo de los años, le permite saber con facilidad qu&eacute; producto es el que m&aacute;s se adapta a las <span>necesidades</span> del cliente.</p>
+                                                                        <p style="text-align: justify">
+    	                                                                    <?php
+	                                                                        	if ($spanish) {
+																					echo "Dedica ya más de 10 años en diferentes áreas de venta. Su experiencia a lo largo de los años, le permite saber con facilidad qu&eacute; producto es el que m&aacute;s se adapta a las <span>necesidades</span> del cliente.";
+	                                                                        	} else {
+	                                                                        		echo "He dedicates over 10 years in various sales areas. His experience over the years allows him to easily know which product is best suited to the customer's <span>needs</span>.";
+	                                                                        	}
+                                                                        	?>
+                                                                        
+                                                                        </p>
                                                                 </div></td>
                                                             </tr>
                                                     </table></td>

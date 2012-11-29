@@ -40,9 +40,16 @@
                                                                         <img src="images/torno.gif" alt="Torno" width="150" height="150" style="margin:0 0 0 29px">
                                                                         <br>
                                                                         <br style="line-height:18px">
-                                                                        <strong>Creatividad y experiencia.</strong><br>
+                                                                        <strong><?php if ($spanish) { echo "Creatividad y experiencia"; } else { echo "Creativity and experience"; } ?></strong><br>
                                                                         <br style="line-height:5px">
-                                                                        Metal e Ideas tiene por objetivo brindar seguridad y efectividad en la realizaci&oacute;n de sus trabajos, aportando creatividad en sus procesos que hacen que sus productos tengan originalidad y confiabilidad, respecto a los que existe hoy en el mercado.<br>
+                                                                        	<?php
+	                                                                        	if ($spanish) {
+																					echo "Metal e Ideas tiene por objetivo brindar seguridad y efectividad en la realizaci&oacute;n de sus trabajos, aportando creatividad en sus procesos que hacen que sus productos tengan originalidad y confiabilidad, respecto a los que existe hoy en el mercado.";
+	                                                                        	} else {
+	                                                                        		echo "Metal e Ideas aims to provide safety and effectiveness in carrying out its work, providing creativity in their processes that make original and reliabe products compared to what is on the market.";
+	                                                                        	}
+                                                                        	?>
+                                                                        <br>
                                                                         <br style="line-height:15px">
                                                                     <!--a href="#">read more</a--> </div>
                                                                 </td>
@@ -50,17 +57,24 @@
                                                                 <td style="width:242px">
                                                                     <img src="images/title1_2.gif" alt="" style="margin:7px 0 0 17px"><br>
                                                                     <br style="line-height:17px">
-                                                                    <div id="dot" style="margin-left:20px; width:207px"><strong>Aumente su productividad, disminuya sus costos</strong><br>
+                                                                    <div id="dot" style="margin-left:20px; width:207px"><strong><?php if ($spanish) { echo "Aumente su productividad, disminuya sus costos"; } else { echo "Increase your productivity, reduce your costs"; } ?></strong><br>
                                                                         <br style="line-height:5px">
-                                                                        Hacemos que cada producto tenga un uso &oacute;ptimo de los recursos, dismunuyendo sus costos y priorizando sus necesidades.<br>
+                                                                        	<?php
+	                                                                        	if ($spanish) {
+																					echo "Hacemos que cada producto tenga un uso &oacute;ptimo de los recursos, disminuyendo sus costos y priorizando sus necesidades.";
+	                                                                        	} else {
+	                                                                        		echo "We do that every product has an optimal use of resources, reducing their costs and prioritizing your needs.";
+	                                                                        	}
+                                                                        	?>
+                                                                        <br>
                                                                         <br style="line-height:15px">
-                                                                        <strong>Aplicaciones sobre maquinarias:</strong><br>
+                                                                        <strong><?php if ($spanish) { echo "Aplicaciones sobre maquinarias"; } else { echo "Applications on machineries"; } ?>:</strong><br>
                                                                         <br style="line-height:4px">
                                                                         <ul>
-                                                                            <li><span>Dise&ntilde;o</span></li>
-                                                                            <li><span>Adaptaci&oacute;n</span></li>
-                                                                            <li><span>Reformas</span></li>
-                                                                            <li><span>Instalaci&oacute;n</span></li>
+                                                                            <li><span><?php if ($spanish) { echo "Dise&ntilde;o"; } else { echo "Design"; } ?></span></li>
+                                                                            <li><span><?php if ($spanish) { echo "Adaptaci&oacute;n"; } else { echo "Adaptation"; } ?></span></li>
+                                                                            <li><span><?php if ($spanish) { echo "Reformas"; } else { echo "Reforms"; } ?></span></li>
+                                                                            <li><span><?php if ($spanish) { echo "Instalaci&oacute;n"; } else { echo "Instalation"; } ?></span></li>
                                                                         </ul>
                                                                         <br style="line-height:13px">
                                                                     </div>
@@ -74,13 +88,27 @@
                                                                                         <td class="bg4"></td>
                                                                                         <td style="width:241px" class="list1"><img src="images/title1_3.gif" alt="" style="margin:7px 0 0 16px"><br>
                                                                                             <br style="line-height:17px">
-                                                                                            <div style="margin-left:20px; width:207px"><span>Mejora constante</span><br>
+                                                                                            <div style="margin-left:20px; width:207px"><span><?php if ($spanish) { echo "Mejora constante"; } else { echo "Constant improvement"; } ?></span><br>
                                                                                                 <br style="line-height:2px">
-                                                                                                Diseñamos y rediseñamos nuestros productos, buscando un alto nivel de optimizaci&oacute;n.<br>
+						                                                                        	<?php
+							                                                                        	if ($spanish) {
+																											echo "Diseñamos y rediseñamos nuestros productos, buscando un alto nivel de optimizaci&oacute;n.";
+							                                                                        	} else {
+							                                                                        		echo "We design and redesign our products, looking for a high level of optimization.";
+							                                                                        	}
+						                                                                        	?>
+                                                                                                <br>
                                                                                                 <br style="line-height:12px">
-                                                                                                <span>Nuevas Ideas</span><br>
+                                                                                                <span><?php if ($spanish) { echo "Nuevas ideas"; } else { echo "New ideas"; } ?></span><br>
                                                                                                 <br style="line-height:2px">
-                                                                                                Tenemos como filosof&iacute;a la originalidad en nuestros productos y es por eso que estamos en continua investigaci&oacute;n de nuevas t&eacute;cnicas.<br>
+						                                                                        	<?php
+							                                                                        	if ($spanish) {
+																											echo "Tenemos como filosof&iacute;a la originalidad en nuestros productos y es por eso que estamos en continua investigaci&oacute;n de nuevas t&eacute;cnicas.";
+							                                                                        	} else {
+							                                                                        		echo "We have a philosophy of originality in our products and that is why we are constantly researching new techniques.";
+							                                                                        	}
+						                                                                        	?>
+                                                                                                <br>
                                                                                                 <br style="line-height:12px">
                                                                                                 <img src="images/migmacs.gif" alt="migmacs" align="middle" width="100" height="100" border="0" style="margin:0 0 0 9px">
                                                                                         </div></td>
