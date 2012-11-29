@@ -33,7 +33,7 @@
                                                             <tr>
                                                                 <td style="width:241px;align:meddle" class="list" align="center">
                                                                     <img src="images/en-construccion.gif" ><br><br>
-                                                                    En construcci&oacute;n
+                                                                    <?php if ($spanish) { echo "En construcci&oacute;n"; } else { echo "Under construction"; } ?>
                                                                     <!--
                             <img src="images/title5_1.gif" alt="" style="margin:6px 0 0 8px"><br>
                             <br style="line-height:16px">

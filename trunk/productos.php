@@ -72,7 +72,9 @@
 																while ($row = mysql_fetch_array ($result))
 																{
 																	echo '<h2 id="categoria" class="list4" ><strong>' . utf8_encode($row['nombre']) . '</strong></h2>'."\n";
-																	echo '<p>Cliquee en las im&aacute;genes para ver sus detalles.</p>'."\n";
+																	echo '<p>';
+																	if ($spanish) { echo "Cliquee en las im&aacute;genes para ver sus detalles"; } else { echo "Click on images to view details"; }
+																	echo '.</p>'."\n";
 																	echo '<div id="gallery'.$row['categoria_id'].'" class="gallery" style="width:726px" >'."\n";
 																	echo '<ul>'."\n";
 																	$categoria_id = $row['categoria_id'];
@@ -99,7 +101,7 @@
 												</tr>
                                                 <tr>
                                                     <td align="center" valign="middle">
-                                                        <div class="list4" style="nowrap:nowrap; font-size:16px;height:35px;margin-top:20px;"><b><a target="_blank" href="http://www.metaleideas.blogspot.com/">¡¡¡ Vea nuestros &uacute;ltimos productos !!!</a></b></div>
+                                                        <div class="list4" style="nowrap:nowrap; font-size:16px;height:35px;margin-top:20px;"><b><a target="_blank" href="http://www.metaleideas.blogspot.com/"><?php if ($spanish) { echo "¡¡¡ Vea nuestros &uacute;ltimos productos"; } else { echo "See our latest products"; } ?>&nbsp;!!!</a></b></div>
                                                     </td>
                                                 </tr>
                                                 <tr>

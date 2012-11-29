@@ -12,13 +12,13 @@
 
             function isTelefonoValido() {
                 if (isNaN(form.telefono.value)) {
-                    setMensaje("telefonoDiv", "El Telefono debe ser numerico");
+                    setMensaje("telefonoDiv", "<?php if ($spanish) { echo "El tel&eacute;fono debe ser num&eacute;rico"; } else { echo "The phone must be numeric"; } ?>");
                     form.telefono.select();
                     return false;
                 }
                 else {
                     if (form.telefono.value.length < 8) {
-                        setMensaje("telefonoDiv", "El Telefono debe tener al menos 8 digitos");
+                        setMensaje("telefonoDiv", "<?php if ($spanish) { echo "El tel&eacute;fono debe tener al menos 8 digitos"; } else { echo "The phone must be at least 8 digits"; } ?>");
                         form.telefono.select();
                         return false;
                     }
@@ -30,7 +30,7 @@
                 var form = document.getElementById('form');
                 var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
                 if(reg.test(form.mail.value) == false) {
-                    setMensaje("mailDiv", "Direccion de mail invalida");
+                    setMensaje("mailDiv", "<?php if ($spanish) { echo "Direcci&oacute;n de mail inv&aacute;lida"; } else { echo "Invalid e-mail"; } ?>");
                     form.mail.select();
                     return false;
                 }
@@ -39,7 +39,7 @@
 
             function isComponenteVacio(componente, valor, divMensaje) {
                 if (trim(componente.value) == "") {
-                    setMensaje(divMensaje, "Debe ingresar su " + valor);
+                    setMensaje(divMensaje, "<?php if ($spanish) { echo "Debe ingresar su "; } else { echo "You must enter your "; } ?>" + valor);
                     componente.select();
                     return true;
                 }
@@ -48,10 +48,10 @@
 
             function isContactoValido() {
                 var form = document.getElementById('form');
-                if (isComponenteVacio(form.nombre, "Nombre:", "nombreDiv")) {
+                if (isComponenteVacio(form.nombre, "<?php if ($spanish) { echo "Nombre"; } else { echo "Name"; } ?>:", "nombreDiv")) {
                     return false;
                 }
-                if (isComponenteVacio(form.telefono, "Telefono:", "telefonoDiv")) {
+                if (isComponenteVacio(form.telefono, "<?php if ($spanish) { echo "Tel&eacute;fono"; } else { echo "Phone"; } ?>:", "telefonoDiv")) {
                     return false;
                 }
                 else {
@@ -67,7 +67,7 @@
                         return false;
                     }
                 }
-                if (isComponenteVacio(form.mensaje, "Mensaje:", "mensajeDiv")) {
+                if (isComponenteVacio(form.mensaje, "<?php if ($spanish) { echo "Mensaje"; } else { echo "Message"; } ?>:", "mensajeDiv")) {
                     return false;
                 }
 
@@ -138,26 +138,33 @@
                                                                         <br style="line-height:3px">
                                                                         La Matanza<img src="images/spacer.gif" alt="" width="55" height="1">Pcia de Bs As<br>
                                                                         <br style="line-height:3px">
-                                                                        Teléfono:<img src="images/spacer.gif" alt="" width="41" height="1">+54 11 4467 8062<br>
+                                                                        <?php if ($spanish) { echo "Tel&eacute;fono"; } else { echo "Phone"; } ?>:<img src="images/spacer.gif" alt="" width="41" height="1">+54 11 4467 8062<br>
                                                                         <br style="line-height:3px">
-                                                                        Móvil:<img src="images/spacer.gif" alt="" width="54" height="1">+54 911 6184 5833<br>
+                                                                        <?php if ($spanish) { echo "M&oacute;vil"; } else { echo "Mobile"; } ?>:<img src="images/spacer.gif" alt="" width="54" height="1">+54 911 6184 5833<br>
                                                                         <br style="line-height:3px">
                                                                         &nbsp;<img src="images/spacer.gif" alt="" width="101" height="1">&nbsp;<br>
                                                                         <br style="line-height:3px">
-                                                                        <a class="link3" target="_blank" href="http://maps.google.es/maps?saddr=Au.+Luis+Dellepiane&daddr=Cnel.+Isle%C3%B1o+1661,+Gregorio+de+Laferrere,+Buenos+Aires,+Argentina&hl=es&ie=UTF8&ll=-34.710574,-58.521767&spn=0.102448,0.154324&sll=-34.71784,-58.53128&sspn=0.102439,0.154324&geocode=FZi47v0dlZWD_A%3BFZn77f0duS6C_CkxKc5ilcW8lTGrIxhqHkND8A&mra=mrv&z=13" >Click aqu&iacute; para saber c&oacute;mo llegar<br>desde Av. Gral Paz y Au. Ricchieri</a><br>
+                                                                        <a class="link3" target="_blank" href="http://maps.google.es/maps?saddr=Au.+Luis+Dellepiane&daddr=Cnel.+Isle%C3%B1o+1661,+Gregorio+de+Laferrere,+Buenos+Aires,+Argentina&hl=es&ie=UTF8&ll=-34.710574,-58.521767&spn=0.102448,0.154324&sll=-34.71784,-58.53128&sspn=0.102439,0.154324&geocode=FZi47v0dlZWD_A%3BFZn77f0duS6C_CkxKc5ilcW8lTGrIxhqHkND8A&mra=mrv&z=13" ><?php if ($spanish) { echo "Click aqu&iacute; para saber c&oacute;mo llegar<br>desde&nbsp;"; } else { echo "Click here to find out how to get<br>from&nbsp;"; } ?>Av. Gral Paz y Au. Ricchieri</a><br>
                                                                         <img src="images/title6_2.gif" alt="" style="margin-left:7px"><br>
                                                                         <br style="line-height:13px">
-                                                                        <strong>Envios.</strong> Capital Federal y Gran Bs As, <span>a convenir</span>. Otras localidades: Llevaremos su compra al transporte que usted indique. La mercadería viaja por cuenta y orden del comprador.<br>
+                                                                        	<?php
+	                                                                        	if ($spanish) {
+																					echo "<strong>Envios.</strong> Capital Federal y Gran Bs As, <span>a convenir</span>. Otras localidades: Llevaremos su compra al transporte que usted indique. La mercadería viaja por cuenta y orden del comprador.";
+	                                                                        	} else {
+	                                                                        		echo "<strong>Shipping.</strong> Capital Federal and Gran Buenos Aires, <span>to be arranged</span>. Other locations: We will move your purchase to the shipping of your preference. The merchandise travels at buyer's order.";
+	                                                                        	}
+                                                                        	?>
+                                                                        <br>
                                                                         <br style="line-height:15px">
                                                                         <table style="height:53px;  width:442px" >
                                                                             <tr>
-                                                                                <td style="width:253px"><strong>Ventas:</strong><br>
+                                                                                <td style="width:253px"><strong><?php if ($spanish) { echo "Ventas"; } else { echo "Sales"; } ?>:</strong><br>
                                                                                     <br style="line-height:3px">
                                                                                     Tel.:<img src="images/spacer.gif" alt="" width="20" height="1">+54 11 4467 8062<br>
                                                                                     <br style="line-height:3px">
                                                                                     E-mail: <span><a href="mailto:ventas@metaleideas.com.ar">ventas@metaleideas.com.ar</a></span>
                                                                                 </td>
-                                                                                <td style="width:190px"><strong>Atención al cliente:</strong><br>
+                                                                                <td style="width:190px"><strong><?php if ($spanish) { echo "Atención al cliente"; } else { echo "Customer Support"; } ?>:</strong><br>
                                                                                     <br style="line-height:3px">
                                                                                     Tel.:<img src="images/spacer.gif" alt="" width="20" height="1">+54 11 4467 8062<br>
                                                                                     <br style="line-height:3px">
@@ -167,7 +174,7 @@
                                                                             <tr>
                                                                                 <td>
                                                                                     <br style="line-height:6px">
-                                                                                    <strong>Gerente de Ventas:</strong> Juan Medina<br>
+                                                                                    <strong><?php if ($spanish) { echo "Gerente de Ventas"; } else { echo "Sales Manager"; } ?>:</strong> Juan Medina<br>
                                                                                     E-mail: <span><a href="mailto:juan.medina@metaleideas.com.ar">juan.medina@metaleideas.com.ar</a></span>
                                                                                 </td>
                                                                             </tr>
@@ -179,13 +186,13 @@
                                                                     <form action="contacto_save.php" enctype="multipart/form-data" id="form">
                                                                         <table style="height:263px;  width:213px; margin-left:19px" class="form">
                                                                             <tr>
-                                                                                <td style="height:44px">Nombre:<br>
+                                                                                <td style="height:44px"><?php if ($spanish) { echo "Nombre"; } else { echo "Name"; } ?>:<br>
                                                                                     <input name="nombre" type="text">
                                                                                     <div id="nombreDiv" class="mensajeErr"></div>
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td style="height:44px">Tel&eacute;fono:<br>
+                                                                                <td style="height:44px"><?php if ($spanish) { echo "Tel&eacute;fono"; } else { echo "Phone"; } ?>:<br>
                                                                                     <input name="telefono" type="text">
                                                                                     <div id="telefonoDiv" class="mensajeErr"></div>
                                                                                 </td>
@@ -198,18 +205,18 @@
                                                                             </tr>
                                                                             <tr>
                                                                                 <td width="50" height="30" >
-                                                                                    <div id="successDiv" class="mensajeSucc" style="width:50"></div>
-                                                                                    <div id="errorDiv" class="mensajeErr" style="width:50"></div>
+                                                                                    <div id="successDiv" class="mensajeSucc" style="width:200px"></div>
+                                                                                    <div id="errorDiv" class="mensajeErr" style="width:200px"></div>
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td style="height:131px">Mensaje:<br>
+                                                                                <td style="height:131px"><?php if ($spanish) { echo "Mensaje"; } else { echo "Message"; } ?>:<br>
                                                                                     <textarea name="mensaje" cols="0" rows="0"></textarea>
                                                                                     <div id="mensajeDiv" class="mensajeErr"></div>
                                                                                     <br>
                                                                                     <br style="line-height:7px">
-                                                                                    <a href="#" onClick="document.getElementById('form').reset()" class="link1">Limpiar</a><img src="images/spacer.gif" alt="" width="9" height="1">
-                                                                                    <a href="#" onClick="return enviarContacto();" class="link2">Enviar</a>
+                                                                                    <a href="#" onClick="document.getElementById('form').reset()" class="link1"><?php if ($spanish) { echo "Limpiar"; } else { echo "Clean"; } ?></a><img src="images/spacer.gif" alt="" width="9" height="1">
+                                                                                    <a href="#" onClick="return enviarContacto();" class="link2"><?php if ($spanish) { echo "Enviar"; } else { echo "Send"; } ?></a>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -255,15 +262,27 @@
                 pageTracker._trackPageview();
             } catch(err) {}
         </script>
+		<script type="text/javascript">
+			<?
+				if ($_REQUEST['r'] == "true") {
+					echo('setMensaje("successDiv", "');
+					if ($spanish) {
+						echo "Hemos recibido su mensaje. En breve lo estaremos contactando.";
+					} else {
+				    	echo "We have received your message. We will contact you soon.";
+					}
+					echo('");');
+				}
+				if ($_REQUEST['r'] == "false") {
+					echo('setMensaje("errorDiv", "');
+					if ($spanish) {
+						echo "No pudimos recibir su mensaje. Por favor intente mas tarde.";
+					} else {
+				    	echo "We were unable to receive your message. Please, try again later.";
+					}
+					echo('");');
+				}
+			?>
+		</script>
     </body>
-	<script>
-		<?
-			if ($_REQUEST['r'] == "true") {
-			    echo('setMensaje("successDiv", "Hemos recibido su mensaje. En breve lo estaremos contactando.");');
-			}
-			if ($_REQUEST['r'] == "false") {
-			    echo('setMensaje("errorDiv", "No pudimos recibir su mensaje.Por favor intente mas tarde.");');
-			}
-		?>
-	</script>
 </html>
